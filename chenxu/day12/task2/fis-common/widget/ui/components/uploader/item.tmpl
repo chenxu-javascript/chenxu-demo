@@ -1,0 +1,10 @@
+<li data-pid="<%=file.id%>" class="zbj-uploadfile-item">
+    <div class="zbj-uploadfile-percent-ui"></div>
+    <div class="zbj-uploadfile-item-detail">
+        <div class="zbj-uploadfile-name fl"><%=file.name%></div>
+        <a data-pid="<%=file.id%>" href="javascript:void(0)" class="zbj-uploadfile-delete fr" action-type="delete">x</a>
+        <span class="zbj-uploadfile-status fr">等待上传...</span>
+        <span class="zbj-uploadfile-percent-val fr"></span>
+        <input type="hidden" name="upload_file"/>
+    </div>
+</li>

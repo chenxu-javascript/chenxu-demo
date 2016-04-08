@@ -1,0 +1,121 @@
+<iframe id="employ-iframe"  name="employ-iframe" style="display: none"></iframe>
+<form method="post" target="employ-iframe" action="">
+    <input type="hidden" name="witkeyid" value="<%=employId%>"/>
+    <div class="employ-dialog-baseinfo clearfix">
+        <%if(type == "witkey"){%>
+        <div class="employ-dialog-avatar">
+        <img src="<%=data.avatar%>" width="94" height="94">
+        </div>
+        <div class="employ-dialog-witkey">
+        <div class="employ-dialog-witkey-name yahei"><%=data.brandname%>
+        <%if(data.userMeta.is_mall != '0'){%>
+        <img class="witkey-ico" src="http://t5.zbjimg.com/t5s/yxmall/img/enter_btn_ico.png" alt="优选商城" title="优选商城" align="absmiddle">
+        <%}else{%>
+        <%if(data.userMeta.level){%><img class="witkey-ico" src="<%=data.userMeta.levelImg%>" alt="猪八戒" title="能力等级：猪<%=data.userMeta.level%>戒" align="absmiddle"><%}%>
+        <%}%>
+        <%if(data.userMeta.isGolden!= '0'){%><i class="witkey-ico ui-icosmember ui-icosmember-<%=data.userMeta.isGolden%>" title="<%=data.userMeta.goldTip%>服务商"></i><%}%>
+        <%if(data.userMeta.doublecompensate != '0'){%>
+        <a class="witkey-ico" href="http://u.<%=window.ZBJInfo.baseURI%>/newsecurity/intro/" target="_blank" title="服务商已缴纳保证金，出现问题支持双倍赔付" rel="nofollow">
+        <img src="http://t5.zbjimg.com/t5s/common/img/fuwubao/guzhu-20.png" align="absmiddle">
+        </a>
+        <%}%>
+        </div>
+        <ul class="employ-dialog-witkey-meta unstyled">
+        <li>
+        <span  class="employ-dialog-witkey-meta-name">服务承诺</span>
+        <%if( data.userMeta.promise.yuanchuang != '0'){%><span>保证原创</span><%}%>
+        <%if( data.userMeta.promise.weihu != '0'){%><span>保证维护</span><%}%>
+        <%if( data.userMeta.promise.wancheng != '0'){%><span>保证完成</span><%}%>
+        </li>
+        <li>
+        <span  class="employ-dialog-witkey-meta-name">实名认证</span>
+        <span><%if( data.userMeta.idverified != '0' ){%>已<%}else{%>未<%}%>认证</span>
+        </li>
+        <li>
+        <span  class="employ-dialog-witkey-meta-name">手机绑定</span>
+        <span><%if( data.userMeta.phonebinded != '0' ){%>已<%}else{%>未<%}%>绑定</span>
+        </li>
+        <li>
+        <span  class="employ-dialog-witkey-meta-name">双倍赔付</span>
+        <%if(data.userMeta.doublecompensate != '0' ){%>
+        <span>支持</span><span>保证金<strong class="highlight"><%=data.userMeta.compensatemoney%>元</strong></span>
+        <%}else{%>
+        无
+        <%}%>
+        </li>
+        </ul>
+        </div>
+        <%}else{%>
+        <div class="employ-dialog-avatar">
+        <img src="<%=data.serviceCover%>" width="94" height="94">
+        </div>
+        <div class="employ-dialog-witkey">
+        <div class="employ-dialog-witkey-name yahei"><%=data.serviceName%></div>
+        <ul class="employ-dialog-witkey-meta unstyled yahei">
+        <li>
+        <span  class="employ-dialog-witkey-meta-name">服务商</span>
+        <span><%=data.brandName%></span>
+        </li>
+        <li>
+        <span  class="employ-dialog-witkey-meta-name">服务承诺</span>
+        <%if( data.promise.yuanchuang  != '0' ){%><span>保证原创</span><%}%>
+        <%if( data.promise.weihu  != '0' ){%><span>保证维护</span><%}%>
+        <%if( data.promise.wancheng  != '0' ){%><span>保证完成</span><%}%>
+        </li>
+        <li>
+        <span  class="employ-dialog-witkey-meta-name">服务价格</span>
+        <span><strong class="highlight">&yen; <%=data.servicePrice%></strong><%if(data.serviceUnit){%>/<%=serviceUnit%><%}%></span>
+        </li>
+        </ul>
+        </div>
+        <%}%>
+    </div>
+    <div class="employ-dialog-contact"></div>
+    <div class="employ-dialog-extra">
+        <%if(type == 'service' && data.coupon && data.coupon.length){%>
+        <div class="employ-dialog-coupon-wrap yahei">
+        <div class="employ-dialog-section-title yahei">优惠券</div>
+        <ul class="employ-dialog-coupon-list unstyled clearfix">
+        <%for(var i = 0, item;item=data.coupon[i++];){%>
+        <li <%if(!item.canbeused){%>class="disabled"<%}%>>
+        <label>
+        <div class="coupon-title">满<%=item.orderPrice%>使用</div>
+        <div class="coupon-detail">
+        <div class="coupon-money"><%=item.offerPrice%><span>元</span></div>
+        <div class="coupon-label">优惠券</div>
+        </div>
+        <input data-offer="<%=item.offerPrice%>"  <%if(!item.canbeused){%>disabled="disabled"<%}%>} type="radio" name="coupon" value="<%=item.couponId%>"/>
+        </label>
+        </li>
+        <%}%>
+        </ul>
+    </div>
+    <%}%>
+    </div>
+    <div class="employ-dialog-detail"><textarea name="content" placeholder="请告诉服务商您的具体要求..."></textarea></div>
+    <div class="employ-dialog-attachment">
+        <ul class="uploadfile-list unstyled">
+        </ul>
+        <div class="employ-dialog-upload-wrap">
+            <a class="employ-dialog-upload-btn yahei" href="javascript:void(0)">上传附件</a>
+            <span class="gray"> 如果您有相关资料也可以传给服务商参考</span>
+        </div>
+        <input type="hidden" name="affix"/>
+    </div>
+
+    <div class="employ-dialog-captcha"></div>
+
+    <%if( type == 'witkey' ) {%>
+    <div class="employ-dialog-reward yahei">
+    <span>请输入您的预算 :  </span><input type="text" name="amount" value=""/> 元
+    </div>
+    <%} else {%>
+    <div class="employ-dialog-reward employ-dialog-service-reward yahei clearfix">
+    <div class="service-reward-detail fl">
+    <span class="service-reward-origan">总价：<%=data.servicePrice%>元</span>
+    <span class="j-service-coupon-wrap">优惠：-<span class="service-reward-coupon">-</span>元</span>
+    </div>
+    <div class="service-reward-total fr">支付：<input type="text" name="amount" value="<%=data.servicePrice%>"/> 元</span></div>
+    </div>
+    <%}%>
+</form>

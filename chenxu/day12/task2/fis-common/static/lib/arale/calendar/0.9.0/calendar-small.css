@@ -1,0 +1,16 @@
+.ui-calendar {
+    padding: 4px;
+}
+
+.ui-calendar .ui-calendar-pannel,.ui-calendar-year,.ui-calendar-month,.ui-calendar,.ui-calendar-date {
+    width: 210px;
+}
+
+.ui-calendar-date tr {
+    font-size: 14px;
+}
+
+.ui-calendar-date td, .ui-calendar-date th {
+    width: 30px;
+    padding: 2px 0;
+}

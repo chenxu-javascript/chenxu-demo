@@ -1,0 +1,221 @@
+/*重置弹窗样式*/
+.order-service{
+    outline: none;
+}
+.order-service-close{
+    width: 26px;
+    height: 26px;
+    background: url('images/btn-close.png') no-repeat;
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 11;
+    font-size: 0px;
+}
+
+.order-service-wrap {
+    position: relative;
+    padding-top: 99px;
+    font-family: "microsoft yahei";
+    background: #fff;
+}
+
+.order-service-header {
+    width: 674px;
+    height: 104px;
+    background: url(images/bg-header.png) no-repeat;
+    top: -20px;
+    position: absolute;
+    left: 0px;
+    h3 {
+        color: #fff;
+        font-size: 20px;
+        margin: 35px 0px 0px 178px;
+        font-weight: bold;
+    }
+    p {
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0px 0px 0px 137px;
+    }
+}
+
+.order-service-body {
+    .order-service-row {
+        overflow: hidden;
+        margin-top: 9px;
+        .upload-wrap {
+            margin-top: 10px;
+            li {
+                a {
+                    margin-left: 5px;
+                }
+            }
+        }
+        .order-service-label {
+            float: left;
+            color: #000;
+            font-size: 16px;
+            width: 123px;
+            text-align: right;
+            line-height: 33px;
+            font-weight: bold;
+        }
+        .order-service-con {
+            float: left;
+            margin-left: 14px;
+            select {
+                width: 113px;
+                height: 33px;
+                border: 1px solid #d9d9d9;
+                color: #000;
+                font-size: 14px;
+                margin: 0px;
+                font-family: "microsoft yahei";
+                border-radius: 0px;
+                margin-right: 23px;
+            }
+            .role-sel {
+                display: inline-block;
+                width: 111px;
+                height: 31px;
+                color: #000;
+                font-size: 14px;
+                text-align: center;
+                line-height: 31px;
+                border: 1px solid #d9d9d9;
+                font-family: "microsoft yahei";
+                position: relative;
+                &:hover {
+                    text-decoration: none;
+                }
+                &:focus {
+                    text-decoration: none;
+                }
+                i {
+                    position: absolute;
+                    width: 30px;
+                    height: 29px;
+                    background: url("images/ico-sel.png") no-repeat;
+                    right: 1px;
+                    bottom: 1px;
+                    display: none;
+                }
+            }
+            .role-sel.sel {
+                border-color: #f4b856;
+                i {
+                    display: block;
+                }
+            }
+            span.sep {
+                font-size: 14px;
+                margin: 0 5px;
+            }
+            .order-txt {
+                width: 240px;
+                height: 31px;
+                line-height: 31px;
+                display: block;
+                border: 1px solid #d9d9d9;
+                font-family: "microsoft yahei";
+                font-size: 14px;
+                color: #000;
+                padding-left: 7px;
+            }
+            .order-textarea {
+                width: 487px;
+                height: 114px;
+                resize: none;
+                border: 1px solid #d9d9d9;
+                font-size: 14px;
+                color: #000;
+                font-family: "microsoft yahei";
+                padding-left: 5px;
+            }
+            .order-file {
+                display: inline-block;
+                width: 89px;
+                height: 31px;
+                background: #f4f4f4;
+                border-radius: 2px;
+                border: 1px solid #dddddd;
+                color: #010101;
+                font-size: 14px;
+                text-decoration: underline;
+                font-family: "microsoft yahei";
+                cursor: pointer;
+            }
+            .order-file-note {
+                color: #a9a9a9;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.order-service-footer {
+    text-align: center;
+    margin-top: 10px;
+    padding-bottom: 19px;
+    background: #fff;
+    button {
+        background: #ff6800;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        width: 196px;
+        height: 35px;
+        font-family: "microsoft yahei";
+        padding: 0px;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+}
+
+.msg-main {
+    padding: 10px;
+    font-family: "microsoft yahei";
+    .msg-con {
+        color: #0c0c0c;
+        font-size: 14px;
+        text-align: center;
+        word-wrap: break-word;
+        .ico-ok {
+            display: inline-block;
+            width: 29px;
+            height: 28px;
+            background: url('images/ico-ok.jpg') no-repeat;
+            vertical-align: middle;
+        }
+        span{
+        	vertical-align: middle;
+        }
+    }
+    .msg-error {
+        text-align: center;
+        color: #ff6800;
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 8px;
+        margin-top: 8px;
+        word-wrap: break-word;
+    }
+    .btn-sure {
+        display: block;
+        width: 73px;
+        height: 26px;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 26px;
+        color: #fff;
+        background: #e97300;
+    }
+}
+.tip-error{
+    color: red;
+    font-size: 12px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>工具集</title>
+    <style>
+
+        .success-test-unit {
+            color: green;
+        }
+
+        .error-test-unit {
+            color: red;
+            text-decoration: line-through;
+        }
+        .Timer{
+            width: 300px;
+            height: 200px;
+            padding: 20px;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-1.8.2.min.js">
+
+    </script>
+
+</head>
+<body>
+         <div class="Timer">
+             <p class="status">状态：未计时</p>
+             <p class="timeshow">时间：0ms</p>
+             <p class="timems"></p>
+             <div>
+                 <button class="start" onclick="timer.start()">start</button>
+                 <button class="pause" onclick="timer.pause()">pause</button>
+                 <button class="reset" onclick="timer.reset()">reset</button>
+                 <button class="getDuration" onclick="timer.getDuration()">getDuration</button>
+             </div>
+         </div>
+</body>
+        <script src="IntTerval.js"></script>
+        <script src="../test.js"></script>
+</html>

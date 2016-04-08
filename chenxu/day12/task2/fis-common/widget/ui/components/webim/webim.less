@@ -1,0 +1,437 @@
+
+.webim{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 1024;
+    font-family: "Microsoft YaHei", sans-serif;
+    background: #fff;
+}
+.webim-switch{
+    height: 40px;
+    line-height: 40px;
+    width: 180px;
+    background: #f0f1f4;
+    cursor: pointer;
+    border-radius: 2px 0 0 2px;
+    padding-left: 20px;
+}
+.webim-switch-icon{
+    display: inline-block;
+    vertical-align: middle;
+    height: 16px;
+    width: 20px;
+    background: url(image/icon.png) no-repeat -40px 0;
+}
+.webim-switch-txt{
+    font-size: 14px;
+    color: #333;
+    margin-left: 10px;
+}
+
+.webim-box{
+    display: none;
+    width: 600px;
+    height: 400px;
+    box-shadow: -3px -2px 3px -1px #eee;
+    border-radius: 2px 0 0 2px;
+    border: 1px solid #eee;
+}
+.webim-people{
+    width: 160px;
+    height: 100%;
+}
+.webim-people-list{
+    overflow-y: auto;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.webim-people-list li{
+    position: relative;
+    padding: 8px 7px 8px 5px;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    color: #333;
+}
+.webim-people-list li:hover{
+    background: #f2f2f5;
+}
+.webim-people-list li.active{
+    background: #f2f2f5;
+}
+.webim-people-list .item-close{
+    display: none;
+    color: #696e78;
+    width: 18px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+.webim-people-list li:hover .item-close{
+    display: inline-block;
+}
+.webim-people-list .item-avatar{
+    height: 30px;
+    width: 30px;
+    vertical-align: middle;
+}
+.webim-people-list .item-name{
+    display: inline-block;
+    vertical-align: middle;
+    width: 75px;
+    margin-left: 5px;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.webim-people-list .item-count{
+    position: absolute;
+    min-width:14px;
+    height:14px;
+    padding:2px;
+    background:#f63a00;
+    top:21px;
+    right:0;
+    text-align: center;
+    line-height:14px;
+    border-radius: 10px;
+    font-style: normal;
+    color:#fff;
+    font-size:12px;
+}
+
+.webim-chat{
+    position: relative;
+    padding: 40px 0 100px 0;
+    border-left: 1px solid #eee;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.webim-chat-head{
+    padding-left: 10px;
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    margin-top: -40px;
+    border-bottom: 1px solid #eee;
+}
+.webim-chat-title a{
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.webim-chat-head .item-action{
+    height: 40px;
+    line-height: 40px;
+    padding-right: 10px;
+}
+.webim-chat-sound,.webim-chat-fullpage,.webim-chat-close{
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+    margin-right: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.webim-chat-fullpage{
+    background: url(image/icon.png) no-repeat -40px -24px;
+}
+.webim-chat-sound{
+    background: url(image/icon.png) no-repeat -19px 0;
+}
+.webim-chat-close{
+    background: url(image/icon.png) no-repeat 0 -24px;
+}
+.webim-chat-sound-mute{
+    background: url(image/icon.png) no-repeat 0 0;
+}
+
+.webim-chat-content{
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+    background: #fcfafa;
+    padding:20px 10px 0;
+}
+.webim-chat-content.hide-warn{
+    padding-top: 0;
+}
+.webim-chat-warn{
+    position: absolute;
+    top:40px;
+    z-index: 1025;
+    text-align: center;
+    padding: 5px 0;
+    width: 100%;
+    background: #ffe7c8;
+}
+.webim-warn-close{
+    cursor: pointer;
+    margin-right: 5px;
+}
+.webim-warn-close:hover{
+    color: #ff7900;
+}
+.webim-chat-tips{
+    display: block;
+    padding: 6px 0;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 12px;
+    color: #808080;
+    margin-bottom: 6px;
+}
+.webim-load-history{
+    cursor: pointer;
+}
+.webim-chat-tips.warn span{
+    text-align: center;
+    padding:5px;
+    color: #000;
+    border-radius: 10px;
+    background: #c9c1c3;
+}
+.webim-chat-tips.warn span:before{
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: url(image/icon.png) 0 -48px;
+    margin-right: 6px;
+}
+.webim-chat-msg{
+    margin-bottom: 10px;
+    width: 100%;
+    color:#333;
+}
+.webim-chat-my-msg .webim-chat-msg-avatar{
+    float: right;
+}
+.webim-chat-my-msg .webim-chat-msg-dialog{
+    float: right;
+    background: #DAF0B4;
+    margin-right: 10px;
+    margin-left: 0;
+}
+.webim-chat-my-msg .webim-chat-msg-dialog:before{
+    content: "";
+    position: absolute;
+    left: auto;
+    right: -8px;
+    width:0;
+    height:0;
+    border-width:8px;
+    border-color:#DAF0B4 transparent transparent  transparent;
+    border-style:solid dashed dashed  dashed; 
+}
+.webim-chat-msg-dialog:before{
+    content: "";
+    position: absolute;
+    left: -8px;
+    width:0;
+    height:0;
+    border-width:8px;
+    border-color:#E8E8E8 transparent transparent  transparent;
+    border-style:solid dashed dashed  dashed;
+}
+.webim-chat-my-msg .webIm-chat-loding{
+    float: right;
+    margin-right: 5px;
+}
+.webim-chat-msg-avatar{
+    display: block;
+    float: left;
+    height: 30px;
+    width: 30px;
+}
+.webim-chat-msg-dialog{
+    position: relative;
+    float: left;
+    max-width: 240px;
+    font-size: 12px;
+    padding: 6px;
+    background: #E8E8E8;
+    box-shadow: 0 3px 3px #ddd;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.webim-chat-msg-dialog p{
+    margin: 0;
+    line-height: 20px;
+}
+.webim-chat-msg-avatar img{
+    width: 30px;
+    height: 30px;
+}
+.webim-msg-dialog-txt{
+    word-wrap: break-word;
+}
+.webim-msg-dialog-txt img{
+    vertical-align: bottom;
+    max-width: 100%;
+    width: auto\9;
+    height: auto;
+    border: 0;
+}
+.webIm-chat-loding{
+    float: left;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.webim-download {
+    margin-right: 20px;
+}
+.webim-chat-input{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+}
+.webim-chat-input-tools{
+    height: 22px;
+    line-height: 22px;
+    font-size: 12px;
+    padding-left: 8px;
+    border-bottom: 1px solid #eee;
+}
+.webim-chat-input-tools .item-face,.webim-chat-input-tools .item-pic{
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+    margin-right: 5px;
+}
+.webim-chat-input-tools .item-face{
+    background: url(image/icon.png) no-repeat -19px -48px;
+}
+.webim-chat-input-tools .item-pic{
+    background: url(image/icon.png) no-repeat -41px -48px;
+}
+
+.webim-chat-input-text{
+    width: 100%;
+    height: 40px;
+    border: none;
+    resize: none;
+    margin-bottom: 5px;
+    box-shadow: none;
+}
+
+.webim-chat-input-foot {
+    height: 24px;
+}
+.webim-people-rule{
+    margin-right: 50px;
+}
+.webim-chat-input-foot span{
+    color: #bbb;
+    font-size: 12px;
+}
+.webim-chat-input-btn{
+    border: none;
+    height: 22px;
+    line-height: 20px;
+    width: 50px;
+    color: #fff;
+    font-weight: bold;
+    margin-left: 10px;
+    background: #f60;
+    cursor: pointer;
+    border-radius: 2px;
+    margin-right: 10px;
+}
+.webim-chat-input-btn:hover{
+    background: #f63a00;
+}
+
+/*总控制显隐开关*/
+.webim-normal .webim-switch{
+    display: none;
+}
+.webim-normal .webim-box{
+    display: block;
+}
+
+/*全屏样式*/
+.webim-fullpage {
+    width: 100%;
+    height: 100%;
+}
+.webim-fullpage .webim-box{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.webim-fullpage .webim-chat{
+    padding-bottom: 150px;
+}
+.webim-fullpage .webim-chat-input-text{
+    height: 90px;
+}
+.webim-fullpage .webim-chat-fullpage{
+    background-position: -19px -24px;
+}
+
+.webim-emoji{
+    width: 325px;
+    height: 152px;
+    font-size: 0;
+    padding: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #ccc;
+    position: absolute;
+    top: -166px;
+    display: none;
+    left:0;
+    background: #fff;
+}
+.webim-emoji span{
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 4px;
+}
+.webim-emoji span:hover{
+    background:#f1f1f1;
+    cursor: pointer;
+}
+.webim-emoji span img{
+    padding:5px;
+}
+
+.webim-unread-animation .webim-switch-icon{
+    animation: flash 1s infinite;
+    -webkit-animation: flash 1s infinite;
+}
+
+@-webkit-keyframes flash {
+    from, to {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes flash {
+    from, to {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+//webim emoji sprite
+.RC_Expression {width:22px;height:22px;vertical-align:top;background-image:url(http://res.websdk.rongcloud.cn/css-sprite_bg.png);display:inline-block}

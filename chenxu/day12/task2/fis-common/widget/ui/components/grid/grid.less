@@ -1,0 +1,54 @@
+/* zbj.grid style module */
+@wrap:1190px;
+@side:240px;
+
+/* ===== 布局 ===== */
+.zbj-grid{
+    width:@wrap;
+    margin:0 auto;
+    *zoom:1; //for ie 6-7
+    &:before,
+    &:after {
+        display: table;
+        line-height: 0;
+        content: "";
+    }
+    &:after {
+        clear: both;
+    }
+    .main-wrap,
+    .sidebar{
+        float:left;
+    }
+    .main-wrap{
+        width:100%;
+    }
+
+    //默认两栏，右侧240，左侧自适应
+    .main{
+        margin-right:@side + 20;
+        min-height:1px;
+    }
+    .sidebar{
+        width:@side;
+        margin-left:-@side;
+    }
+}
+//左右互换，结构不变，左侧240，右侧自适应
+.zbj-grid-inverse{
+    .main{
+        margin-right:0;
+        margin-left:@side + 20;
+    }
+    .sidebar{
+        margin-left:-@wrap;
+    }
+}
+
+// 990 相应式，配合js
+.zbj-grid-990{
+    width:990px;
+}
+.zbj-grid-990.zbj-grid-inverse .sidebar{
+    margin-left:-990px;
+}

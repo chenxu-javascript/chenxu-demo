@@ -1,0 +1,83 @@
+
+
+html,body{
+    height:100%;
+    overflow:hidden;
+}
+body,div,h2,p,button{
+    margin:0;
+    padding:0;
+}
+body{
+    font:12px/1.5 Tahoma;
+}
+button{
+    cursor:pointer;
+}
+.layer{
+    margin: 0 auto;
+    width: 200px;
+}
+#mask{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.h3header{
+    font-size:12px;
+    height:30px;
+    background:#FC0;
+    border-bottom:1px solid #ccc;
+    cursor:move;
+    line-height: 30px;
+    color: #fff;
+}
+
+.title{
+    float: left;
+    cursor:default;
+    padding-left: 5px;
+}
+.close{
+    width: 18px;
+    height: 100%;
+    text-align: center;
+    float: right;
+    cursor:pointer;
+    margin-right: 5px;
+    padding-right: 5px;
+}
+p{
+    height: 120px;
+    width: 100%;
+    background-color: #d8d8d8;
+    vertical-align: middle;
+    line-height: 120px;
+    text-align: center;
+    color: black;
+    font-size: 16px;
+}
+.button{
+    border-top: 1px #CCC solid;
+    height: 49px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 49px;
+    background-color: #AAAAAA;
+}
+.submitBtn,.cancelBtn{
+    padding: 0 15px;
+    height: 24px;
+    line-height: 24px;
+    border: none;
+    color: #fff;
+}
+.submitBtn{
+    background-color: #09c;
+    margin-right: 10px;
+}
+.cancelBtn{
+    background-color: #0c6;
+    margin-left: 10px;
+}

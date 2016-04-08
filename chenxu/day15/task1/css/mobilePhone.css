@@ -1,0 +1,423 @@
+html {
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: "microsoft yahei";
+}
+
+.center{
+    width: 100%;
+    margin: auto;
+}
+/*header 部分 */
+.header{
+    height: auto;
+}
+.header-title{
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 0.35rem;
+}
+.header-nav{
+    width: 100%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+}
+.header-title-company{
+    margin-left: 0.2rem;
+}
+.header-title-ul{
+    display: none;
+}
+.header-nav-center{
+    overflow-y: hidden;
+}
+.header-nav-logo img{
+    padding: 0.7rem 0;
+}
+.header-btn{
+    position: absolute;
+    right: 0.5rem;
+    top: 1.4rem;
+    width: 1.57rem;
+    height: 1.282rem;
+    display: block;
+}
+.header-nav-right{
+    display: none;
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    top:3.4rem;
+    background-color: #eee;
+}
+.header-nav-right li a{
+    padding: 0 0;
+    width: 100%;
+    height: 100%;
+}
+.header-nav-right li {
+    text-align: center;
+    width: 100%;
+    height: 2rem;
+    border-bottom: 1px solid #ccc ;
+    line-height: 2rem;
+}
+.header-nav-right li a{
+    font-size: 0.6rem;
+}
+.header-nav-logo{
+    margin-left: 0.2rem;
+}
+/*banner*/
+.bannermain{
+    height: 10rem;
+}
+.bannermain-banner{
+    display: none;
+}
+.bannermain-border{
+    position: static;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+.bannermain-nav {
+    height: 1.5rem;
+}
+.bannermain-item{
+    width: 33.3%;
+    line-height: 1.5rem;
+    font-size: 0.5rem;
+}
+.bannermain-border-lable {
+    height: 3.2rem;
+    padding: 0.3rem 0  0 0;
+}
+.bannermain-input{
+    width: 8rem;
+    margin: 0.35rem 1rem;
+    height: 0.8rem;
+}
+.bannermain-detail{
+    width: 8rem;
+    padding: 0.3rem 1rem;
+    font-size: 0.4rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+}
+.bannermain-button{
+    width: 8rem;
+    margin: 0  1rem;
+    height: 1.8rem;
+}
+.bannermain-smalltitle{
+    height: 1.6rem;
+    margin-top: 0.5rem;
+}
+.bannermain-button button {
+    height: 1.4rem;
+    line-height: 1.4rem;
+}
+.bannermain-smalltitle {
+    height: 1.8rem;
+    line-height: 1.8rem;
+    margin-top: 0.7rem;
+    font-size: 0.45rem;
+}
+.bannermain-smalltitle em{
+    font-size: 0.7rem;
+}
+/*banner 部分结束*/
+.profession-title{
+    height: 1.2rem;
+    padding: 0.5rem 0;
+    line-height: 1.2rem;
+    font-size: 1rem;
+}
+.profession{
+    height: 15.2rem;
+}
+.profession-list {
+    height: 13.5rem;
+}
+.profession-list li{
+    width: 50%;
+    height: 6.75rem;
+}
+.profession-list li p{
+    height: 1rem;
+    padding: 0.6rem 0;
+    font-size: 0.4rem;
+}
+
+.description {
+    height: auto;
+}
+.description-one,.description-two{
+    padding: 0 0 0 0;
+    height: auto;
+}
+.description-01-leftimg {
+    margin-left: 0;
+    width: 10rem;
+    height: 5.74rem;
+    background-size: contain;
+    float: none;
+    margin: 0.2rem 0;
+}
+.description-01,.description-02{
+    clear: both;
+    float: none;
+    width: 100%;
+    height: 10rem;
+    margin-top: 0;
+}
+
+.description-01-onaccout a{
+    font-size: 0.7rem;
+    line-height: 1.5rem;
+}
+.description-01 h2,.description-02 h2{
+    height: 1.2rem;
+    padding: 0.8rem 0;
+    font-size: 1rem;
+    line-height: 1rem;
+    width: 10rem;
+}
+.description-01-list,.description-02-list {
+    height: 4.5rem;
+    width: 8rem;
+    padding: 0 1rem;
+}
+.description-01-list li span{
+    font-size: 0.6rem;
+    height: 0.9rem;
+    line-height: 0.9rem;
+}
+.description-01-onaccout{
+    height: 1.5rem;
+    width: 8rem;
+    margin: 0 1rem;
+}
+.description-02-rightimg{
+    float: none;
+    background-size: contain;
+    width: 10rem;
+    height: 5.5rem;
+    margin: 0.2rem 0;
+}
+.description-02-opencampany{
+    width: 8rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    margin : 0.2rem 0 0.8rem 1rem;
+}
+.description-02-opencampany a{
+    height: 1.5rem;
+    line-height: 1.5rem;
+}
+.description-02-list li{
+    padding-left: 0;
+    height: auto;
+}
+.description-02-list li span{
+    font-size: 0.6rem;
+    height: 0.9rem;
+    line-height: 0.9rem;
+}
+.customervoice {
+    clear: both;
+    height: auto;
+}
+.customervoice-header {
+    height: 2.5rem;
+}
+.customervoice-line-left,.customervoice-line-right {
+    margin-top: 1.24rem;
+    width: 3rem;
+}
+.customervoice-header-title{
+    font-size: 0.9rem;
+    line-height: 2.5rem;
+    width: 4rem;
+}
+.customervoice-list{
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.customervoice-img-one, .customervoice-img-two, .customervoice-img-three{
+    position: static;
+    top: 0;
+    width: 5rem;
+    height: 5rem;
+    float: left;
+}
+.customervoice-list li{
+    text-align: inherit;
+    width: 100%;
+    margin-top: 0.2rem;
+}
+.customervoice-list-body {
+    position: static;
+    top: 0;
+    overflow: hidden;
+
+}
+.customervoice-list-detial{
+    font-size: 0.5rem;
+    padding-left: 0.2rem;
+}
+.customervoice-list-margin{
+    margin: 0 0;
+}
+.customervoice-list-p{
+    width: 90%;
+    margin-top: 0.2rem;
+    padding: 0 5%;
+    font-size: 0.4rem;
+    line-height: 0.65rem;
+    text-overflow:ellipsis;
+}
+.customervoice-list-name {
+    height: 1rem;
+    font-size: 0.7rem;
+    padding: 0.1rem 0.2rem;
+    line-height: 1rem;
+}
+.customervoice-img-two{
+    float: right;
+}
+.mediamodule{
+    height: auto;
+    clear: both;
+}
+.mediareports-left{
+    width: 100%;
+    height: auto;
+}
+.mediareports-left-header, .moving-right-header {
+    height: 2rem;
+    margin-top: 0.5rem;
+}
+.mediareports-left-header h2, .moving-right-header h2 {
+    width:5rem;
+    font-size: 1rem;
+    padding: 0.4rem 0 0.4rem 0.2rem;
+    height: 1.19rem;
+    line-height: 1.19rem;
+}
+.mediareports-left-main-leftimg{
+    width: 4.8rem;
+    height: 5rem;
+    background-size: contain;
+    margin-right: 0.2rem;
+}
+.mediareports-main{
+    float: none;
+    margin-left: 0;
+    overflow: hidden;
+    width: 5rem;
+}
+.mediareports-main h3, .mediareports-footer h3{
+    text-align: center;
+    font-size: 0.45rem;
+    padding: 0.1rem 0;
+    width: 100%;
+    font-weight: normal;
+}
+.mediareports-left-main-one{
+    border-bottom: none;
+    width: 100%;
+    padding: 0.5rem 0 0 0;
+    height: auto;
+}
+.mediareports-main span, .mediareports-footer span{
+    padding-left: 0.2rem;
+    font-size: 0.35rem;
+    height: 0.7rem;
+    line-height: 0.7rem;
+}
+.mediareports-footer p{
+    padding: 0 0.2rem;
+}
+.allcircle{
+    height: 11rem;
+    float: left;
+}
+.mediareports-footer{
+    clear: both;
+    padding-top: 0.2rem;
+}
+
+.moving-right{
+    width: 100%;
+    margin-left: 0;
+    height: auto;
+}
+.moving-right-list{
+    padding: 0.2rem;
+    height: 9rem;
+    overflow: hidden;
+    width: 9.6rem;
+}
+.moving-right-list li{
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 0.4rem;
+}
+.platform{
+    clear: both;
+    height: auto;
+}
+.platform h3{
+    font-size: 0.6rem;
+    height: 1rem;
+    line-height: 1rem;
+    padding: 1.2rem 0;
+}
+.platform-list{
+    margin-bottom: 0;
+    height: auto;
+}
+.platform-list li{
+    width: 100%;
+    height: 3rem;
+    float: left;
+}
+.footer{
+    clear: both;
+}
+.footer-left{
+    width: 100%;
+
+}
+.footer-left-list{
+    width: auto;
+    height: 1.8rem;
+    margin: 0 0.2rem 0 .4rem ;
+}
+.footer-right{
+    display: none;
+}
+.footer-left-list li {
+    height: 0.6rem;
+    font-size: 0.35rem;
+    line-height: .6rem;
+    padding: 0.8rem .2rem .4rem .2rem;
+}
+.footer-companyimg{
+    width: 100%;
+    height: 1.6rem;
+    background-size: cover;
+}
+.footer-left-list-p1{
+    line-height: 1rem;
+    height: 1rem;
+    font-size: 0.35rem;
+}

@@ -1,0 +1,66 @@
+/* zbj.table style module */
+
+@table-th-bg: #F6F6F6;
+@table-border-color: #CCC;
+@table-even-bg: #FBFBFB;
+
+.zbj-table {
+    border-collapse:collapse;
+    border-spacing: 0;
+    width:100%;
+    text-align: left;
+    thead{
+        background-color: @table-th-bg;
+    }
+    td,
+    th {
+        padding: 8px;
+        line-height: 20px;
+    }
+    th {
+        text-align: left;
+    }
+}
+
+.zbj-table-default{
+    border:1px solid @table-border-color;
+    td,th{
+        border-bottom: 1px solid @table-border-color;
+    }
+}
+
+.zbj-table-inbox{
+    td,th{
+        border-bottom: 1px solid @table-border-color;
+    }
+}
+
+.zbj-table-bordered{
+    border:1px solid @table-border-color;
+    td,th{
+        border-bottom: 1px solid @table-border-color;
+        border-left: 1px solid @table-border-color;
+    }
+}
+
+.zbj-table-condensed{
+    td,
+    th {
+        padding: 5px;
+        line-height: 20px;
+    }
+}
+
+.zbj-table-striped{
+    tbody tr:nth-child(even),tr.item-even {
+        td{
+            background-color: @table-even-bg;
+        }
+    }
+}
+
+.zbj-table-hover{
+    tbody tr:hover td{
+        background-color: @table-even-bg;
+    }
+}

@@ -1,0 +1,273 @@
+/* zbj.tips style module */
+
+.zbj-tips {
+    padding: 8px 12px;
+    position: relative;
+    background: @brand-primary-light;
+    color: darken(@brand-primary-light, 60%);
+    border: 1px solid darken(@brand-primary-light, 5%);
+    font-size: 12px;
+}
+.zbj-tips-icon{
+    float: left;
+    font-size: 16px;
+    line-height: 1;
+}
+.zbj-tips-bd{
+    overflow: hidden;
+    *zoom:1;
+    padding: 0 8px;
+}
+.zbj-tips-close{
+    font-size: 14px;
+    font-family: tahoma;
+    font-weight:bold;
+    font-style:normal;
+    cursor: pointer;
+    position: absolute;
+    line-height: 1;
+    top:8px;
+    right: 8px;
+    padding: 1px 2px;
+    &:hover{
+        background: #fff;
+    }
+}
+
+.zbj-tips-info{
+    background: @brand-info-light;
+    color: darken(@brand-info-light, 60%);
+    border: 1px solid darken(@brand-info-light, 5%);
+}
+
+.zbj-tips-danger{
+    background: @brand-danger-light;
+    color: darken(@brand-danger-light, 60%);
+    border: 1px solid darken(@brand-danger-light, 5%);
+}
+.zbj-tips-success{
+    background: @brand-success-light;
+    color: darken(@brand-success-light, 60%);
+    border: 1px solid darken(@brand-success-light, 5%);
+}
+
+//zbj-tips-lg ,多行提示块
+.zbj-tips-lg{
+    padding: 15px 30px;
+    .zbj-tips-icon{
+        font-size: 32px;
+    }
+    .zbj-tips-bd{
+        padding: 0 15px;
+        line-height: 20px;
+        color: @gray-dark;
+    }
+    .zbj-tips-tit{
+        margin: 0;
+        font-size: 14px;
+        line-height: 32px;
+    }
+    .zbj-tips-list{
+        margin: 0;
+        padding-left: 20px;
+    }
+}
+
+//
+////zbj-poptips,提示浮层
+//
+//.zbj-poptip {
+//    position: absolute;
+//    z-index: @zx200;
+//    display: none;
+//    background-color: #fff;
+//    border: 1px solid #ffc059;
+//    .box-shadow(1px 1px 3px rgba(0,0,0,0.4));
+//    font-size: 12px;
+//    .zbj-tips-close{
+//        top:10px;
+//        &:hover{
+//            background: #ddd;
+//        }
+//    }
+//}
+//
+//.zbj-poptip-bd {
+//    padding: 10px 25px;
+//}
+//
+//// mini 版本
+//.zbj-poptip-sm{
+//    .zbj-poptip-bd{
+//        padding: 2px 20px;
+//    }
+//    .zbj-tips-close{
+//        top: 2px;
+//        right: 2px;
+//    }
+//}
+//
+//// Arrows
+////
+//// .arrow is outer, .arrow i is inner
+//
+//.zbj-poptip-arrow,
+//.zbj-poptip-arrow i {
+//    position: absolute;
+//    display: block;
+//    width: 0;
+//    height: 0;
+//    border-style: solid;
+//    _border-style: dashed;// hack for ie6 because transparent not supported
+//    border-color: transparent;
+//}
+//.zbj-poptip{
+//    .zbj-poptip-arrow {
+//        border-width: 11px;
+//        i{
+//            border-width: 10px;
+//        }
+//    }
+//}
+//.zbj-poptip-sm{
+//    .zbj-poptip-arrow {
+//        border-width: 7px;
+//        i{
+//            border-width: 6px;
+//        }
+//    }
+//}
+//
+//.zbj-poptip-top{
+//    margin-top: -10px;
+//    .zbj-poptip-arrow{
+//        left: 50%;
+//        bottom:-11px;
+//        margin-left:-11px;
+//        border-bottom-width: 0;
+//        border-top-color:#ffc059;
+//        &.left{
+//            left: 31px;
+//        }
+//        &.right{
+//            left: auto;
+//            right: 20px;
+//        }
+//        i{
+//            bottom:1px;
+//            margin-left:-10px;
+//            border-bottom-width: 0;
+//            border-top-color:#fff;
+//        }
+//    }
+//    &.zbj-poptip-sm{
+//        margin-top: -6px;
+//        .zbj-poptip-arrow{
+//            bottom:-7px;
+//            margin-left:-7px;
+//            i{
+//                margin-left:-6px;
+//            }
+//        }
+//    }
+//}
+//.zbj-poptip-right{
+//    margin-left: 10px;
+//    .zbj-poptip-arrow{
+//        top: 50%;
+//        left:-11px;
+//        margin-top:-11px;
+//        border-left-width: 0;
+//        border-right-color:#ffc059;
+//        i{
+//            left:1px;
+//            bottom:-10px;
+//            border-left-width: 0;
+//            border-right-color:#fff;
+//        }
+//        &.top{
+//            top: 31px;
+//        }
+//        &.bottom{
+//            top: auto;
+//            bottom: 20px;
+//        }
+//    }
+//    &.zbj-poptip-sm{
+//        margin-left: 6px;
+//        .zbj-poptip-arrow{
+//            left:-7px;
+//            margin-top:-7px;
+//            i{
+//                bottom:-6px;
+//            }
+//        }
+//    }
+//}
+//.zbj-poptip-bottom{
+//    margin-top: 10px;
+//    .zbj-poptip-arrow {
+//        left: 50%;
+//        top:-11px;
+//        margin-left:-11px;
+//        border-top-width: 0;
+//        border-bottom-color:#ffc059;
+//        &.left{
+//            left: 31px;
+//        }
+//        &.right{
+//            left: auto;
+//            right: 20px;
+//        }
+//        i{
+//            top:1px;
+//            margin-left:-10px;
+//            border-top-width: 0;
+//            border-bottom-color:#fff;
+//        }
+//    }
+//    &.zbj-poptip-sm{
+//        margin-top: 6px;
+//        .zbj-poptip-arrow {
+//            top:-7px;
+//            margin-left:-7px;
+//            i{
+//                margin-left:-6px;
+//            }
+//        }
+//    }
+//}
+//
+//.zbj-poptip-left{
+//    margin-left: -10px;
+//    .zbj-poptip-arrow{
+//        top: 50%;
+//        right:-11px;
+//        margin-top:-11px;
+//        border-right-width: 0;
+//        border-left-color:#ffc059;
+//        &.top{
+//            top: 31px;
+//        }
+//        &.bottom{
+//            top: auto;
+//            bottom: 20px;
+//        }
+//        i{
+//            right:1px;
+//            bottom:-10px;
+//            border-right-width: 0;
+//            border-left-color:#fff;
+//        }
+//    }
+//    &.zbj-poptip-sm{
+//        margin-left: -6px;
+//        .zbj-poptip-arrow{
+//            right:-7px;
+//            margin-top:-7px;
+//            i{
+//                bottom:-6px;
+//            }
+//        }
+//    }
+//}

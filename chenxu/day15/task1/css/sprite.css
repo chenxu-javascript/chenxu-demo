@@ -1,0 +1,104 @@
+
+
+
+
+.bannermain{
+    height: 520px;
+    background: url(../img/banner_02.jpg) no-repeat center ;
+    background-size: cover;
+}
+.profession-one{
+    width: 120px;
+    height: 120px;
+    background: url(../img/icon01_03_03.png?__sprite) no-repeat center;
+    display: inline-block;
+}
+.profession-two{
+    width: 120px;
+    height: 120px;
+    background: url(../img/icon02_03.png?__sprite) no-repeat center;
+    display: inline-block;
+}
+.profession-three{
+    width: 120px;
+    height: 120px;
+    background: url(../img/icon03_03.png?__sprite) no-repeat center;
+    display: inline-block;
+}
+.profession-four{
+    width: 120px;
+    height: 120px;
+    background: url(../img/icon04_03.png?__sprite) no-repeat center;
+    display: inline-block;
+}
+.description-01-leftimg{
+    width: 670px;
+    height: 384px;
+    background: url(../img/decoration03_03.png?__sprite) no-repeat;
+}
+.description-02-rightimg{
+    width: 757px;
+    height: 408px;
+    background: url(../img/decoration04_03.png?__sprite) no-repeat;
+}
+.mediareports-left-main-leftimg{
+    width: 153px;
+    height: 119px;
+    background: url(../img/scientist_03.png?__sprite) no-repeat;
+}
+.customervoice-img-one{
+    width: 161px;
+    height: 161px;
+    background: url(../img/peopel03_03.png?__sprite) no-repeat;
+    display: inline-block;
+}
+.customervoice-img-two{
+    width: 161px;
+    height: 161px;
+    background: url(../img/people04_03.png?__sprite) no-repeat;
+    display: inline-block;
+}
+.customervoice-img-three{
+    width: 161px;
+    height: 161px;
+    background: url(../img/people05_03.png?__sprite) no-repeat;
+    display: inline-block;
+}
+.platform-home{
+    width: 46px;
+    height: 46px;
+    background: url(../img/home_03.png?__sprite) no-repeat;
+    display: inline-block;
+}
+.platform-month{
+    width: 52px;
+    height: 43px;
+    background: url(../img/month_03.png?__sprite) no-repeat;
+    display: inline-block;
+}
+.platform-money{
+    width: 47px;
+    height: 47px;
+    background: url(../img/money_03.png?__sprite) no-repeat;
+    display: inline-block;
+}
+.footer-companyimg{
+    width: 541px;
+    height: 52px;
+    background: url(../img/commpany_03.png?__sprite) no-repeat;
+    display: inline-block;
+}
+.telephone{
+    width: 52px;
+    height: 52px;
+    background: url(../img/phone_03.png?__sprite) no-repeat;
+    display: inline-block;
+}
+.qqicon{
+    width: 146px;
+    height: 36px;
+    background: url(../img/threeicon_03.png?__sprite) no-repeat;
+}
+
+
+

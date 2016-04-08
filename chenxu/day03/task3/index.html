@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>编辑 器</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+
+        }
+        html {
+            height: 100%;
+        }
+        .info{
+            box-sizing: border-box ;
+            width: 80%;
+            margin: 0 auto;
+            height: 100%;
+            padding: 45px 0;
+            background-image: linear-gradient( to bottom,steelblue,steelblue 100%) ;
+            background-size:  1px 100% ;
+            background-repeat: no-repeat;
+            background-position: 40px 0;
+        }
+        .mainbody{
+            box-sizing: border-box;
+            height: 100%;
+            border-top: 2px steelblue solid;
+            border-bottom: 2px steelblue solid;
+            overflow: auto;
+        }
+        .list{
+            min-height: 100%;
+            padding-left: 50px;
+            background-image: linear-gradient(to top, steelblue, steelblue 1px, transparent 1px);
+            background-repeat: repeat;
+            background-size: 100% 30px;
+            line-height: 30px;
+        }
+        .list:focus {
+            outline: none;
+        }
+        .line{
+            border-bottom: 1px solid red;
+            width: 0;
+            top: 20px;
+            position: absolute;
+            animation: run 10s linear infinite alternate;
+        }
+        @keyframes  run {
+            0%{
+                width: 0;
+            }
+            50%{
+                width: 50%;
+            }
+            100%{
+                width: 100%;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+   <div class="line"></div>
+
+   <div class="info">
+       <div class="mainbody">
+            <div class="list" contenteditable>
+                 <div>
+                     天气不错
+                 </div>
+                <div>
+                    今天下雨了
+                </div>
+            </div>
+       </div>
+
+
+   </div>
+</body>
+
+</html>

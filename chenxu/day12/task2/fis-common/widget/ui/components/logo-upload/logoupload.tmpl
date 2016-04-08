@@ -1,0 +1,92 @@
+<div class="clearfix">
+	<span class="fr J_close"></span>
+</div>
+<div class="overlay-content">
+	<p class="up-hint">您上传的图片将会在<strong>“作品馆”</strong>中展示，请上传一张宽700高500像素的<strong>设计终稿</strong>（如下图所示，非效果图），大小200KB内，格式jpg或png，并对作品简单分类。</p>
+	<div class="upload logo-upload">
+		<h2><span>*</span>请上传您的作品：</h2>
+		<ul class="upload-status">
+			<%if ( data.file_url ){%>
+				<li data-pid="o_19i8nh1d31l6k1ho61aceb1j7kg7" class="zbj-uploadfile-item zbj-uploadfile-uploaded">      
+				  	<a href="javascript:void(0)" class="uploadfile-cancel" action-type="cancel" id="zbj-uploadfile-cancel" style="display: none;"></a>                                
+				  	<div>
+				  		<img src="http://p4.zbjimg.com<%=data.file_url%>">
+				  	</div>         
+				</li>
+			<%}%>
+		</ul>
+		<div class="upload-detail logo-photo "<%if(data.file_url){%>style="display: none" <%}%>>
+			<div class="add-logo-upload-btn"></div>
+		</div>
+		<input type="hidden" name="upload" <%if(data.file_url){%> data-changed="0" value = "http://p4.zbjimg.com<%=data.file_url%>" <%}%>/>
+	</div>
+	<div class="upload logo-type">
+		<h2><span>*</span>您LOGO的类型：</h2>
+		<div class="upload-detail type-detail clearfix">
+			<%for(var i = 0, item; item = config.type[i++];){%>
+			<div class="type-group fl">
+				<label>
+					<div class="type-img <%=item.cls%>-type"></div>
+					<div class="type-btn">
+						<input type="radio" name="logoType" value="<%=item.val%>" <%if(data.style == item.val){%>checked="checked"<%}%>>
+						<span><%=item.label%></span>
+					</div>
+				</label>
+			</div>
+			<%}%>
+		</div>
+	</div> 
+	<div class="upload logo-color">
+		<h2><span>*</span>您LOGO的颜色：</h2>
+		<div class="upload-detail color-detail clearfix">
+			<%if ( data.file_url ){%>
+				<%var color = data.color.split(",")%>
+				<%for(var i = 0, item; item = config.color[i++];){%>
+				<div class="color-group fl">
+					<label>
+						<input type="checkbox" value="<%=item.val%>" <%for(var j = 0; j<color.length; j++){%> <%if(color[j] == item.val){%>checked="checked"<%}%> <%}%>>
+						<i class="<%=item.cls%> checkbox-color"></i>
+						<span><%=item.label%></span>
+					</label>
+				</div>
+				<%}%>
+			<%}else{%>
+				<%for(var i = 0, item; item = config.color[i++];){%>
+				<div class="color-group fl">
+					<label>
+						<input type="checkbox" value="<%=item.val%>">
+						<i class="<%=item.cls%> checkbox-color"></i>
+						<span><%=item.label%></span>
+					</label>
+				</div>
+				<%}%>
+			<%}%>
+		</div>
+	</div>
+	<div class="upload-detail upload logo-style">
+		<h2><span>*</span>您LOGO的标签：</h2>
+		<div class="J_style-detail">
+			<input type="text" placeholder="标签中尽量包含作品中所用的元素和作品风格  比如“花瓣”元素或“Web2.0”风格">
+			<button class="J_past">贴 上</button>
+		</div>
+		<div class="J_label-content">
+			<%if (data.tag){%>
+				<%var tag = data.tag.split(",");%>
+				<%for(var i = 0; i<tag.length;i++){%>
+				<div class="J_label-group">	
+					<p class="tag-val"><%=tag[i]%></p>			
+					<span class="close_label">x</span>		
+				</div>
+				<%}%>
+			<%}%>
+		</div>
+	</div>
+	<div class="upload rule">
+		<input type="checkbox" id="logo-rule" <%if(data.file_url){%>checked="checked"<%}%>>
+		<label>我已仔细阅读并同意<a href="http://chengxin.<%=window.ZBJInfo.baseURI%>/report/rule-g-8162" target="_blank">《猪八戒作品馆管理规则》</a>，如果上传的图片违反《猪八戒网作品馆管理规则》，愿意承担相应处罚。</label>
+	</div>
+</div>
+<div class="save">
+	<span class="upload-save-btn <%if(!data.file_url){%> disabled <%}%>">上 传</span>
+	<span class="upload-error" <%if(data.file_url){%> style="display: none" <%}%>>（信息未填写完整）</span>
+</div>

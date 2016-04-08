@@ -1,0 +1,34 @@
+<div class="employ-dialog-section-title yahei">留下您的联系方式，服务商可以更快的与您沟通</div>
+<input name="phone" type="hidden" value="<%=phone.phonenum%>"/>
+<%if(phone.phonenum){%>
+<ul class="unstyled">
+<li>
+<label>
+<input id="exists_phone_input" type="radio" name="exists_phone"
+checked value="<%=phone.phonenum%>"/>
+<%=phone.phonenum%>
+(<%if(phone.isverified){%>已<%}else{%>未<%}%>验证)
+</label>
+</li>
+<li>
+<label>
+<input id="other_phone_input"  type="radio" name="exists_phone" value="0"/>使用其他号码
+</label>
+</li>
+</ul>
+<%}%>
+<div class="employ-dialog-modifyphone" <%if(!phone.phonenum){%>style="display: block"<%}%>>
+<div class="employ-dialog-modifyphone-inputwrap">
+    <input placeholder="请输入您的手机号" name="modifyphone" type="text" class="employ-dialog-modifyphone-input"/>
+    <span class="modifyphone-captcha-wrap"></span>
+    <a class="employ-dialog-modifyphone-verify disabled" href="javascript:void(0)">短信获取验证码</a>
+    <div class="modifyphone-error j-phone-error"><i class="iconfont icon-font">&#xe816;</i> <span class="j-error-tip">请输入正确的手机号</span></div>
+</div>
+<div>
+    <input name="modifyphone-yzm" type="text" class="employ-dialog-modifyphone-input" placeholder="请输入您收到的验证码"/>
+    <div class="modifyphone-error j-verify-error"><i class="iconfont icon-font">&#xe816;</i> <span class="j-error-tip">请输入正确的验证码</span></div>
+    <input name="zbj_csrf_token" type="hidden">
+    <input type="hidden" name="vid" />
+    <input type="hidden" name="uid" />
+</div>
+</div>

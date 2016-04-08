@@ -1,0 +1,90 @@
+<div data-state="0" class="complete-business-info">
+    <div class="prompt-infor">
+        <div class="prompt-media clearfix">
+            <div class="media-left">
+                <img src="<%=window.ZBJInfo.t6Url%>/output/components/business-opportunities/img/girl_p.png">
+            </div>
+            <div class="media-body">
+                <h2><i class="icon-tick"></i>恭喜你,已成功预约顾问!</h2>
+                <p>专业顾问会在30分钟内联系您，请保持手机畅通</p>
+            </div>
+        </div>
+    </div>
+    <div class="complete-info">
+        <form method="post" action="http://task.<%=window.ZBJInfo.baseURI%>/pub/step2-category?frombox=1" id="business-info">
+            <p class="form-tips">继续完善以下信息，我们会安排服务商优先联系你</p>
+            <input type="hidden" value="" name="bs_to_ct_id">
+            <input type="hidden" value="1" name="fromreward">
+            <div class="control-group">
+                <label class="control-label">
+                    <span class="required-tag">*</span>您选择了:
+                </label>
+                <div class="controls category-wrap">
+                    <p id="category-content">LOGO/VI设计、VI系统设计</p>
+                    <div style="display:none;" class="category1 category" id="category1">
+                        <input type="text" class="select-input" name="" value="请选择">
+                        <i class="iconfont icon-font j-arrow">&#xe807;</i>
+                        <ul class="category-dropDown"></ul>
+                    </div>
+                    <div style="display:none;" name="category" class="category2 category" id="category2">
+                        <input type="text" class="select-input" name="" value="请选择">
+                         <i class="iconfont icon-font j-arrow">&#xe807;</i>
+                        <ul class="category-dropDown"></ul>
+                    </div>
+                    <span class="category-edit" id="category-edit" href="javascript:;">修改</span>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">
+                    <span class="required-tag">*</span>
+                    您需要
+                </label>
+                <div class="controls">
+                    <input type="text" placeholder="一句话描述您的需求" name="key">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">
+                    <span class="required-tag">*</span>具体要求
+                </label>
+                <div class="controls intro-wrap">
+                    <textarea placeholder="描述一下您具体的需求" name="intro" class="need-description"></textarea>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">
+                    <span class="required-tag">*</span>联系方式
+                </label>
+                <div class="employ-contact">
+                    <div class="employ-dialog-section-title yahei">留下您的联系方式，服务商可以更快的与您沟通</div>
+                    <input type="hidden" data-role="targetPhone" value="13002375650" name="phone">
+                    <div data-role="modifyphone-wrap" style="display: block" class="employ-dialog-modifyphone">
+                        <div class="employ-dialog-modifyphone-inputwrap">
+                            <input type="text" class="employ-dialog-modifyphone-input" name="modifyphone" placeholder="请输入您的手机号">
+                            <span data-role="captcha" class="modifyphone-captcha-wrap"></span>
+                            <button data-role="verify-sender" class="employ-dialog-modifyphone-verify">短信获取验证码</button>
+                            <div class="modifyphone-error j-phone-error"><i class="iconfont icon-font"></i> 
+                                <span class="j-error-tip">请输入正确的手机号</span>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="text" placeholder="请输入您收到的验证码" class="employ-dialog-modifyphone-input" name="modifyphone-yzm">
+                            <div class="modifyphone-error j-verify-error"><i class="iconfont icon-font"></i>
+                            <span class="j-error-tip">请输入正确的验证码</span>
+                        </div>    
+                            <input type="hidden" name="zbj_csrf_token">
+                            <input type="hidden" name="vid">
+                            <input type="hidden" name="uid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="control-actions business-actions">
+                <a class="ui-btn ui-btn-inverse" id="submit-now" href="javascript:;">立即提交</a>
+                <a class="ui-btn save-business-info" id="save-business-info" href="javascript:;">正在保存需求</a>
+                <a class="not-perfect" href="javascript:;">暂不完善</a>
+            </div>
+        </form>
+    </div>
+    <a class="ui-win-close" href="javascript:;"></a>
+</div>

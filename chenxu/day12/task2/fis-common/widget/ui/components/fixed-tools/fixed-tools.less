@@ -1,0 +1,156 @@
+//zbj-tools
+.zbj-tools-top, .zbj-tools-bottom {
+    position: fixed;
+    _position: absolute;
+    top: 160px;
+    right: 10px;
+}
+.zbj-tools-bottom {
+    top: auto;
+    bottom: 115px;
+    z-index: @zx100;
+
+    .item-tools {
+        display: block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        overflow: hidden;
+        background: #989898;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 1px;
+        &:hover {
+            color: #fff;
+            background: #666666;
+            text-decoration: none;
+        }
+    }
+    .item-ico, .item-txt {
+        display: block;
+        height: 40px;
+    }
+    .zbj-ico {
+        vertical-align: middle;
+    }
+    .item-txt {
+        padding: 0px 5px;
+        height: 40px;
+        line-height: 12px;
+        font-size: 12px;
+    }
+    .item-ico {
+        .transition(all 0.3s ease-in);
+    }
+}
+.zbj-tools-gotop {
+    .icon-font {
+        font-size: 18px;
+    }
+    .zbj-ico-toppig {
+        position: absolute;
+        left: -12px;
+        bottom: 70px;
+    }
+}
+.zbj-tools-app {
+    position: relative;
+    a:hover {
+        .item-ico {
+            margin-top: -30px;
+        }
+        .zbj-poptipnoc {
+            display: block;
+        }
+    }
+    .zbj-poptipnoc {
+        position: absolute;
+        display: none;
+        left: -126px;
+        top: -65px;
+        width: 120px;
+        height: 156px;
+    }
+    .zbj-poptipnoc-bd {
+        padding: 11px;
+        color: #666;
+        white-space: nowrap;
+        & > div:first-child {
+            display: none;
+        }
+        & > div {
+            display: inline-block;
+            vertical-align: top;
+            &.zbj-vline {
+                width: 1px;
+                height: 145px;
+                background: #ccc;
+                margin: -6px 13px;
+                display: none;
+            }
+            & > div {
+                width: 100px;
+                height: 100px;
+            }
+            .item-weixin {
+                background: url("http://t5.zbjimg.com/t5s/lib/img/weixin-zbj100.png");
+            }
+            .item-mobile {
+                background: url("http://t5.zbjimg.com/t5s/lib/img/mqrcode100.png");
+            }
+        }
+        img {
+            width: 100px;
+            height: 100px;
+            vertical-align: top;
+        }
+        p {
+            text-align: center;
+            line-height: 16px;
+            margin-top: 4px;
+        }
+    }
+}
+.zbj-tools-feed {
+    .item-ico {
+        margin-top: -30px;
+    }
+    a:hover {
+        .item-ico {
+            margin-top: 0;
+        }
+    }
+}
+
+.zbj-tools-bottom {
+    .item-txt {
+        padding-top: 6px;
+        height: 34px;
+        line-height: 1.2;
+    }
+    .zbj-tools-app {
+        .item-tools {
+            &:hover {
+                .item-ico {
+                    margin-top: -40px;
+                }
+            }
+        }
+    }
+    .zbj-tools-feed {
+        .item-tools {
+            .item-ico {
+                margin-top: -40px;
+            }
+            &:hover {
+                .item-ico {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+.zbj-tools-feed {
+    display: none;
+}

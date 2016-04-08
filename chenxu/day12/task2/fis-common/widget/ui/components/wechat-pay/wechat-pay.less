@@ -1,0 +1,79 @@
+.pay-layer {
+    z-index: 40;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.pay-select {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 40px;
+    background-color: #fff;
+    padding: 10px 10px 0;
+}
+
+.pay-close {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -15px;
+    right: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+
+    &::after {
+        width: 25px;
+        height: 25px;
+        content: "";
+        display: block;
+        background-image: url(./sprites_v3.png);
+        background-position: -50px 0;
+        background-size: 100px 100px;
+        margin: 2px auto;
+    }
+}
+
+.pay-title {
+    padding: 10px 0;
+    color: #000;
+    text-align: center;
+    font-size: 18px;
+}
+
+.pay-action {
+    text-align: center;
+
+    button {
+        display: block;
+        height: 44px;
+        width: 100%;
+        line-height: 44px;
+        font-size: 16px;
+        margin-bottom: 10px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        text-decoration: none;
+        color: #333;
+        background-color: #f3f3f3;
+    }
+
+    .wechat {
+        background: #67ad03;
+        color: #fff;
+        border: 1px solid transparent;
+        &.disable{
+            background-color: #969696;
+        }
+    }
+
+    .jd {
+        background-color: #d05148;
+        color: #fff;
+    }
+}

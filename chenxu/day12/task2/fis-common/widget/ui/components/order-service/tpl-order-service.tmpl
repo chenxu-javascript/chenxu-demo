@@ -1,0 +1,78 @@
+<div class="order-service-wrap">
+	<div class="order-service-header">
+		<h3>有问题想咨询？快来预约我们的客服吧！</h3>
+		<p>在收到您的预约后，我们会立即安排工作人员在您预约的时间前联系您</p>
+	</div>
+	<div class="order-service-body">
+		<div class="order-service-row">
+			<span class="order-service-label">
+				*您的身份是:
+			</span>
+			<div class="order-service-con">
+				<a href="javascript:void(0)" class="role-sel sel" data-type="1">
+					雇主
+					<i></i>
+				</a>
+				<span class="sep">或</span>
+				<a href="javascript:void(0)" class="role-sel" data-type="2">
+					服务商
+					<i></i>
+				</a>
+			</div>
+		</div>
+		<div class="order-service-row">
+			<span class="order-service-label">
+				*预约时间:
+			</span>
+			<div class="order-service-con">
+				<select class="sel-day" id="selDay">
+					
+				</select>
+				<select class="sel-time" id="selTime">
+					
+				</select>
+			</div>
+		</div>
+		<div class="order-service-row">
+			<span class="order-service-label">
+				*联系方式:
+			</span>
+			<div class="order-service-con">
+				<input type="text" class="order-txt" placeholder="手机号码" id="phone" />
+			</div>
+		</div>
+		<div class="order-service-row">
+			<span class="order-service-label">
+				*问题描述:
+			</span>
+			<div class="order-service-con">
+				<textarea placeholder="请描述您遇到的问题，以便我们的客服能充分准备再与您沟通！" class="order-textarea" id="des">
+				</textarea>
+			</div>
+		</div>
+		<div class="order-service-row">
+			<span class="order-service-label">
+				上传附件:
+			</span>
+			<div class="order-service-con">
+				<div class="order-upload-sel">
+					<button class="order-file">
+						点击上传
+					</button>
+					<span class="order-file-note">
+						（附件可为图片，大小不超过10M )
+					</span>
+				</div>
+				<div class="upload-wrap">
+					<ul id="filelist">
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="order-service-footer">
+		<button id="orderSubmit" type="button">
+			提交
+		</button>
+	</div>
+</div>

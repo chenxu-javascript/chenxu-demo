@@ -1,0 +1,1 @@
+{"user":"defcc","time":"2014-04-28T02:53:48.017Z","platform":"darwin","node":"v0.10.21","spm":"2.2.5","deploy":"0.2.4"}

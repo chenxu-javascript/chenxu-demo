@@ -1,0 +1,465 @@
+.complete-business-info .employ-contact{
+  float: left;
+  clear: both;
+  .employ-dialog-section-title{
+    display: none;
+  }
+  .employ-dialog-modifyphone-verify:hover{
+    text-decoration: none;
+  }
+
+  .modifyphone-error{
+    display: none !important;
+  }
+}
+.complete-business-info .employ-contact.has-verified{
+  .unstyled{
+    padding-top: 5px;
+  }
+
+  li:first-child{
+    label{
+      color: #888;
+      input{
+        display: none;
+      }
+    }
+  }
+  li:last-child{
+    display: none;
+  }
+}
+.complete-business-info .employ-contact.not-verified{
+  .unstyled{
+    display: none;
+  }
+}
+.business-opportunities{
+  .ui-mask{
+    z-index: 500 !important;
+  }
+  &.arale-dialog-1_3_0 .ui-dialog{
+    background-color: transparent;
+    filter: none;
+  }
+  .ui-dialog {
+    top: 50%;
+    z-index: 501 !important;
+    padding: 0;
+    margin-top: 60px;
+    .icon-tick{
+      display: inline-block;
+      height: 30px;
+      width: 30px;
+      background: url(img/tick.png) center no-repeat;
+      vertical-align: -5px;
+      margin-right: 10px;
+    }
+    .ui-dialog-close,
+    .ui-dialog-title{
+      display: none !important;
+      visibility: hidden;
+    }
+    .ui-dialog-container{
+      padding: 0;
+    }
+    .ui-dialog-message{
+      margin-bottom: 0;
+    }
+  }
+  .ui-dialog-content{
+    background-color: #fff;
+    font-family: "microsoft yahei";
+    padding: 0;
+  }
+  .prompt-media{
+    height: 67px;
+  }
+  .employ-dialog-modifyphone-verify{
+    background: #fff1df;
+    border-radius: 3px;
+  }
+}
+.complete-business-info{
+  position: relative;
+  .ui-win-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: url(img/fork.png) center center no-repeat;
+  }
+}
+.complete-business-info.apply-fail{
+  .ui-win-close{
+    background: url(img/fork_a.png) center center no-repeat;
+  }
+}
+.complete-business-info .prompt-infor{
+  background: #ff9000;
+  background-image: none;
+  filter: none;
+  padding: 40px 60px;
+  border-bottom: 2px solid #ffc983;
+  position: relative;
+}
+.complete-business-info.apply-fail .prompt-infor{
+  background-color: #ffbd49;
+  background-image: none;
+  padding: 20px 60px;
+  img{
+    width: 33px;
+    height: 33px;
+  }
+
+  h2{
+    display: inline-block;
+    color: #fff;
+    font-size: 25px;
+    margin: 0 0 0 10px;
+    vertical-align: middle;
+  }
+}
+.complete-business-info{
+  .media-left{
+    float: left;
+    width: 91px;
+    height: 122px;
+    position: absolute;
+    &> img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .media-body{
+    color: #fff;
+    padding-left: 140px;
+    &> h2{
+      font-size: 24px;
+      line-height: 1.0;
+      margin: 0 0 10px 0px;
+      padding-left: 45px;
+    }
+    &> p{
+      font-size: 18px;
+      margin: 0;
+      font-weight: normal;
+    }
+  }
+}
+.complete-business-info .complete-info{
+  padding: 0 0 30px 0;
+  width: 585px;
+  margin: auto;
+  form{
+    margin-bottom: 0;
+  }
+  .form-tips{
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0 20px 0;
+    text-align: center;
+  }
+
+  .control-label{
+    width: auto;
+    color: #000;
+    font-weight: 600;
+    font-size: 16px;
+    padding-top: 2px;
+    float: left;
+    margin-right: 8px;
+    .description{
+      color: #afafaf;
+      font-size: 12px;
+      font-weight: normal;
+      margin-left: 10px;
+    }
+    .required-tag{
+      margin-left: -10px;
+      margin-right: 5px;
+      color: #f60;
+      vertical-align: middle;
+    }
+  }
+  .controls{
+    height: 30px;
+    line-height: 30px;
+    margin-left: 0;
+    float: none;
+    clear: both;
+    p{
+      color: #888;
+      padding-right: 30px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    input{
+      padding: 6px 5px;
+    }
+    &.category-wrap{
+      clear: none;
+    }
+  }
+  .controls.intro-wrap{
+    height: 110px;
+    line-height: 110px;
+  }
+  .controls.category-wrap{
+    position: relative;
+    width: auto;
+    .category-edit{
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: #1d80fa;
+      cursor: pointer;
+    }
+  }
+  .controls input, .controls textarea, .controls .category{
+    width:570px;
+    border-radius: 0;
+    margin-bottom: 0;
+  } 
+  .controls textarea{
+    height: 100px;
+    resize: none;
+    display: inline-block;
+    padding: 4px 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #555555;
+    vertical-align: middle;
+  }
+  .controls{
+    input,textarea{
+        border: 1px solid #e5e5e5;
+    }
+    .category{
+      position: relative;
+      width: 246px;
+      float: left;
+      height: 35px;
+      border: 1px solid #e5e5e5;
+      z-index: 1;
+      .select-input{
+        border: 0;
+        box-shadow: none;
+        width: 206px;
+      }
+      .iconfont{
+        display: inline-block;
+        height: 33px;
+        line-height: 33px;
+        width: 30px;
+        text-align: center;
+        font-size: 20px;
+        cursor: pointer;
+        float: right;
+        transition: transform .5s ease;
+        background-color: transparent;
+        &.up{
+          transform:rotate(180deg);
+        }
+      }
+      .category-dropDown{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background-color: #f5f5f5;
+        height: 275px;
+        min-height: 100px;
+        border: 1px solid #e5e5e5;
+        font-size: 14px;
+        color: #666;
+        display: none;
+        margin-top: 5px;
+        &.show{
+          display: block;
+        }
+        li{
+          line-height: 30px;
+          cursor: pointer;
+          padding-left: 10px;
+          &.selected,
+          &:hover {
+            color: #ff6702;
+            background: #fff1de;
+          }
+        }
+        .mCSB_container{
+          margin-right:0;
+        }
+      }
+    }
+    .category1{
+      margin-right: 0px;
+    }
+    .category2{
+      float: right;
+    }
+  }
+  .control-group .section{
+    display: inline-block;
+  }
+  .control-group{
+    margin-bottom: 20px;
+  }
+  .control-group:before,
+  .control-group:after {
+    content: "";
+    display: table;
+    line-height: 0;
+  }
+  .control-group:after {
+    clear: both;
+  }
+}
+.complete-business-info .business-actions{
+  margin: 0;
+  text-align: center;
+  .ui-btn{
+    width: 150px;
+    display: inline-block;
+    padding: 4px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #ededed;
+    border: 1px solid #d2d2d2;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  .ui-btn-inverse{
+    color: #ffffff;
+    background-color: #ff6900;
+    height: 44px;
+    width: 141px;
+    line-height: 44px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0;
+    border: 0;
+    border-radius: 3px;
+  }
+  .ui-btn.save-business-info{
+    display: none;
+    background-image: url(img/loading16.gif);
+    background-position: 20px 50%;
+    background-repeat: no-repeat;
+  }
+  .ui-btn.submiting-data{
+    background-color: #ededed;
+    border-color: #ccc;
+    color: #999;
+    cursor: not-allowed;
+  }
+  .not-perfect{
+    display: inline-block;
+    color: #555;
+    margin-left: 10px;
+    vertical-align: bottom;
+  }
+}
+.complete-business-info .failure-reasons{
+  padding: 30px 20px;
+  p{
+    font-family: "microsoft yahei";
+    font-size: 14px;
+  }
+}
+.complete-business-info.apply-fail .business-actions{
+  margin: 0 0 40px 0;
+}
+.category .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+  width: 6px;
+  height: 16px;
+  margin: 0 1px;
+  margin-left: 5px;
+}
+.category .mCustomScrollbar .mCustomScrollBox .mCSB_scrollTools .mCSB_draggerContainer .mCSB_dragger .mCSB_dragger_bar{
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+// todo 放到 loginable 里去
+.employ-dialog-contact li {
+  margin-bottom: 15px;
+}
+
+.employ-dialog-contact li label {
+  font-size: 12px;
+  line-height: 1;
+}
+
+.employ-dialog-contact li input {
+  margin-right: 6px;
+  margin-top: 0;
+  vertical-align: bottom;
+}
+
+.employ-dialog-modifyphone {
+  display: none;
+}
+
+.employ-dialog-modifyphone-inputwrap {
+  margin-bottom: 16px;
+}
+
+input.employ-dialog-modifyphone-input,
+.employ-dialog-modifyphone-verify {
+  border: 1px solid #e5e5e5;
+  height: 33px;
+  line-height: 33px;
+  padding: 0 5px;
+}
+
+input.employ-dialog-modifyphone-input {
+  border-radius: 0;
+  font-size: 12px;
+  width: 125px;
+  vertical-align: baseline;
+  box-shadow: none;
+  margin-bottom: 0;
+}
+
+.employ-dialog-modifyphone-verify {
+  border: 1px solid #ff9000;
+  color: #ff9000;
+  display: inline-block;
+  border-radius: 5px;
+  margin-left: 5px;
+  padding: 0 15px;
+  background-image: -webkit-linear-gradient(top, #fffcf7 0%, #ffe9c9 100%);
+  background-image: -o-linear-gradient(top, #fffcf7 0%, #ffe9c9 100%);
+  background-image: linear-gradient(to bottom, #fffcf7 0%, #ffe9c9 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffffcf7', endColorstr='#ffffe9c9', GradientType=0);
+}
+
+.employ-dialog-modifyphone-verify:hover {
+  background-image: -webkit-linear-gradient(top, #ffe9c9 0%, #fffcf7 100%);
+  background-image: -o-linear-gradient(top, #ffe9c9 0%, #fffcf7 100%);
+  background-image: linear-gradient(to bottom, #ffe9c9 0%, #fffcf7 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffe9c9', endColorstr='#fffffcf7', GradientType=0);
+}
+
+.employ-dialog-modifyphone-verify.disabled,
+.employ-dialog-modifyphone-verify.disabled:hover {
+  background: #eeeeee;
+  border: 1px solid #e5e5e5;
+  color: #a9a9a9;
+  cursor: default;
+}

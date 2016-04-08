@@ -1,0 +1,301 @@
+/* input样式
+===========================*/
+input.zbj-checkbox {
+  vertical-align: baseline;
+}
+
+.zbj-input {
+  padding: 7px 9px;
+  line-height: 18px;
+  border: 1px solid @input-border-color;
+  color: @input-text-color;
+  font-size: 12px;
+}
+
+.zbj-input:hover,
+.zbj-textarea:hover,
+.zbj-input-hover {
+  border: 1px solid @input-border-color-hover;
+}
+
+.zbj-input:focus,
+.zbj-textarea:focus,
+.zbj-input-focus {
+  border: 1px solid @input-border-color-focus;
+  box-shadow: 0 0 3px #8cddff;
+  color: @input-text-color-focus;;
+}
+
+.zbj-textarea {
+  line-height: 15px;
+  border: 1px solid @input-border-color;
+  padding: 1px 3px 0 4px;
+  overflow: auto;
+  font-family: Arial;
+  font-size: 12px;
+}
+
+.zbj-input[disabled],
+.zbj-textarea[disabled] {
+  border: 1px solid #ccc;
+  background: #f2f2f2;
+}
+
+.zbj-input:disabled,
+.zbj-textarea:disabled {
+  border: 1px solid #ccc;
+  background: #f2f2f2;
+}
+
+.placeholder {
+  color: #ccc;
+}
+
+
+.zbj-form-item-hover .zbj-input,
+.zbj-form-item-hover .zbj-textarea {
+  border:1px #727272 solid;
+}
+
+.zbj-form-item-focus .zbj-input,
+.zbj-form-item-focus .zbj-textarea {
+  border: 1px #07f solid;
+  box-shadow: 0 0 3px #8cddff;
+}
+
+.zbj-form-item-focus .zbj-form-explain,
+.zbj-form-item-hover .zbj-form-explain {
+  color:#333;
+}
+
+.zbj-input, .input-group-addon {
+  vertical-align: middle;
+}
+.input-group {
+  font-size: 0;
+  vertical-align: middle;
+  display: inline-block;
+
+  *display: inline;
+  *zoom:1;
+}
+.input-group-addon {
+  display: inline-block;
+  padding: 7px 9px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+  color: #555;
+  text-align: center;
+  background-color: #eee;
+  border: 1px solid #ccc;
+
+
+  *display: inline;
+  *zoom: 1;
+}
+.input-group-addon.prepend {
+  border-right: none;
+}
+
+.input-group-addon.append {
+  border-left: none;
+}
+
+/* 大号的input */
+.zbj-input-lg,
+.input-group-lg .zbj-input {
+  font-size: 14px;
+  height: 18px;
+  line-height: 18px;
+  padding: 11px 10px;
+}
+
+.input-group-lg .zbj-label{
+  padding-top: 12px;
+}
+.input-group-lg .input-group-addon,
+.zbj-form-large .input-group-addon {
+  padding: 11px 10px;
+}
+
+/* 小号的input */
+.zbj-input-sm,
+.input-group-sm .zbj-input {
+  font-size: 12px;
+  height: 18px;
+  line-height: 18px;
+  padding: 5px 9px;
+}
+
+.input-group-sm .zbj-label {
+  padding-top: 3px;
+}
+.input-group-sm .input-group-addon {
+  padding: 5px 9px;
+}
+
+/* label样式
+===========================*/
+
+.zbj-label {
+  float: left;
+  width: 170px;
+  margin-left: -180px;
+  padding-top: 5px;
+  text-align: right;
+  font-size: 14px;
+}
+
+.zbj-form-required {
+  color: #FF0000;
+  font-family: SimSun;
+  font-size: 14px;
+  margin-right: 6px;
+}
+
+input.zbj-checkbox {
+  vertical-align: baseline;
+}
+
+/* form样式
+===========================*/
+
+.zbj-form {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.zbj-form, .zbj-form * {
+  list-style: none;
+}
+
+.zbj-form fieldset {
+  border:0;
+  margin: 0;
+  padding: 0;
+}
+
+.zbj-form legend {
+  display: none;
+}
+
+.zbj-form-explain {
+  margin: 0;
+  padding: 8px 0 0;
+  font-size: 12px;
+  color: #B2B2B2;
+}
+
+.zbj-form-other {
+  margin-left: 8px;
+  color: #B2B2B2;
+}
+
+.zbj-form-text {
+  display: inline-block;
+  margin-top: 6px;
+  *display: inline;
+  *zoom: 1;
+}
+
+.zbj-form-item:after {
+  clear: both;
+  content: '.';
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+.zbj-form-item {
+  padding: 0 5px 20px 170px;
+  zoom: 1;
+}
+
+.zbj-form-item select {
+  vertical-align: middle;
+  margin: 4px 0 0;
+}
+
+.zbj-form-item input {
+  vertical-align: middle;
+}
+
+.zbj-form-item .zbj-input {
+  color: #595959;
+  vertical-align: middle;
+  *vertical-align: -5px;
+}
+
+.zbj-form-item-error .zbj-input,
+.zbj-form-item-error .zbj-textarea {
+  background: snow;
+  border: 1px #E7BEBE solid;
+  color: #F00;
+}
+
+.zbj-form-item-error .zbj-input-reset {
+  border: 1px #9C9C9C solid;
+  color: #000;
+}
+
+.zbj-form-item-error .zbj-form-explain {
+  color: #FF5243;
+}
+
+
+.zbj-form-item-success .zbj-form-explain .icon-success {
+  color: green;
+  margin-right: 5px;
+}
+
+
+.zbj-form-large .zbj-input {
+  font-size: 14px;
+  height: 18px;
+  line-height: 18px;
+  padding: 11px 10px;
+}
+
+.zbj-form-large .zbj-label {
+  padding-top: 12px;
+}
+
+/* 垂直布局的表单 */
+
+.zbj-form-vertical .zbj-form-item {
+  padding-left: 0;
+}
+
+.zbj-form-vertical .zbj-label {
+  display: block;
+  float: none;
+  margin-bottom: 10px;
+  margin-left: 0;
+  padding-top: 0;
+  text-align: left;
+  width: auto;
+}
+.zbj-form-vertical .zbj-input,
+.zbj-form-vertical .zbj-textarea {
+  width: 170px;
+}
+.zbj-form-vertical .zbj-textarea {
+  padding: 7px 9px;
+  resize: none;
+  height: 150px;
+}
+
+/* 多列布局表单 */
+.zbj-form-fields {
+  .clearfix();
+}
+.zbj-form-fields .zbj-form-field {
+  float: left;
+}
+.zbj-form-fields-two .zbj-form-field {
+  width: 50%;
+}
+.zbj-form-fields-three .zbj-form-field {
+  width: 33.3%;
+}

@@ -1,0 +1,201 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'rake-zbj' ]
+2 info using npm@2.11.3
+3 info using node@v0.12.7
+4 verbose install initial load of /usr/local/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/local/lib/package.json
+6 silly cache add args [ 'rake-zbj', null ]
+7 verbose cache add spec rake-zbj
+8 silly cache add parsed spec { raw: 'rake-zbj',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'rake-zbj',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: '*',
+8 silly cache add   type: 'range' }
+9 silly addNamed rake-zbj@*
+10 verbose addNamed "*" is a valid semver range for rake-zbj
+11 silly addNameRange { name: 'rake-zbj', range: '*', hasData: false }
+12 silly mapToRegistry name rake-zbj
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry http://registry.cnpmjs.org/
+15 silly mapToRegistry uri http://registry.cnpmjs.org/rake-zbj
+16 verbose addNameRange registry:http://registry.cnpmjs.org/rake-zbj not in flight; fetching
+17 verbose request uri http://registry.cnpmjs.org/rake-zbj
+18 verbose request no auth needed
+19 info attempt registry request try #1 at 11:10:32 AM
+20 verbose request id cdad80509601e5ab
+21 http request GET http://registry.cnpmjs.org/rake-zbj
+22 http 200 http://registry.cnpmjs.org/rake-zbj
+23 silly get cb [ 200,
+23 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+23 silly get     date: 'Mon, 21 Dec 2015 03:10:35 GMT',
+23 silly get     'content-type': 'application/json; charset=utf-8',
+23 silly get     'transfer-encoding': 'chunked',
+23 silly get     connection: 'keep-alive',
+23 silly get     'x-readtime': '12',
+23 silly get     'content-encoding': 'gzip' } ]
+24 verbose get saving rake-zbj to /Users/qiuniu/.npm/registry.cnpmjs.org/rake-zbj/.cache.json
+25 silly addNameRange number 2 { name: 'rake-zbj', range: '*', hasData: true }
+26 silly addNameRange versions [ 'rake-zbj',
+26 silly addNameRange   [ '0.2.23',
+26 silly addNameRange     '0.2.22',
+26 silly addNameRange     '0.2.21',
+26 silly addNameRange     '0.2.20',
+26 silly addNameRange     '0.2.19',
+26 silly addNameRange     '0.2.18',
+26 silly addNameRange     '0.2.17',
+26 silly addNameRange     '0.2.16',
+26 silly addNameRange     '0.2.15',
+26 silly addNameRange     '0.2.14',
+26 silly addNameRange     '0.2.13',
+26 silly addNameRange     '0.2.12',
+26 silly addNameRange     '0.2.11',
+26 silly addNameRange     '0.2.10',
+26 silly addNameRange     '0.2.9',
+26 silly addNameRange     '0.2.8',
+26 silly addNameRange     '0.2.7',
+26 silly addNameRange     '0.2.6',
+26 silly addNameRange     '0.2.5',
+26 silly addNameRange     '0.2.4',
+26 silly addNameRange     '0.2.3',
+26 silly addNameRange     '0.2.2',
+26 silly addNameRange     '0.2.1',
+26 silly addNameRange     '0.2.0',
+26 silly addNameRange     '0.1.2',
+26 silly addNameRange     '0.1.0',
+26 silly addNameRange     '0.0.11',
+26 silly addNameRange     '0.0.10',
+26 silly addNameRange     '0.0.9',
+26 silly addNameRange     '0.0.7',
+26 silly addNameRange     '0.0.6',
+26 silly addNameRange     '0.0.5',
+26 silly addNameRange     '0.0.4',
+26 silly addNameRange     '0.0.3',
+26 silly addNameRange     '0.0.1' ] ]
+27 silly addNamed rake-zbj@0.2.23
+28 verbose addNamed "0.2.23" is a plain semver version for rake-zbj
+29 silly cache afterAdd rake-zbj@0.2.23
+30 verbose afterAdd /Users/qiuniu/.npm/rake-zbj/0.2.23/package/package.json not in flight; writing
+31 verbose afterAdd /Users/qiuniu/.npm/rake-zbj/0.2.23/package/package.json written
+32 silly install resolved [ { name: 'rake-zbj',
+32 silly install resolved     version: '0.2.23',
+32 silly install resolved     main: 'rake.js',
+32 silly install resolved     bin:
+32 silly install resolved      { rk: 'bin/rake',
+32 silly install resolved        'fis-plus': 'bin/rake',
+32 silly install resolved        'fis-pc': 'bin/rake',
+32 silly install resolved        fisp: 'bin/rake' },
+32 silly install resolved     scripts: { test: 'echo "Error: no test specified" && exit 1' },
+32 silly install resolved     dependencies:
+32 silly install resolved      { 'fis-plus': '0.8.7',
+32 silly install resolved        'rake-parser-bdtmpl': '1.1.0',
+32 silly install resolved        'rake-postpackager-seajs': '1.1.1',
+32 silly install resolved        'rake-postprocessor-cmdwrap': '1.1.1',
+32 silly install resolved        'rake-parser-less-common': '1.1.2',
+32 silly install resolved        'rake-command-data': '1.1.9',
+32 silly install resolved        'rake-command-init': '1.0.2',
+32 silly install resolved        'rake-preprocessor-replace': '1.0.0' },
+32 silly install resolved     gitHead: '38f2fee5fd6d43fef345b98c4fead5da9a795e91',
+32 silly install resolved     _id: 'rake-zbj@0.2.23',
+32 silly install resolved     _shasum: '3ba8baa9ab5a82aac44861d22dd7b7e64bffd3c4',
+32 silly install resolved     _from: 'rake-zbj@*',
+32 silly install resolved     _npmVersion: '2.14.3',
+32 silly install resolved     _nodeVersion: '4.0.0',
+32 silly install resolved     _npmUser: { name: 'defcc', email: 'chengchao1@gmail.com' },
+32 silly install resolved     dist:
+32 silly install resolved      { shasum: '3ba8baa9ab5a82aac44861d22dd7b7e64bffd3c4',
+32 silly install resolved        size: 1283,
+32 silly install resolved        noattachment: false,
+32 silly install resolved        tarball: 'http://registry.cnpmjs.org/rake-zbj/download/rake-zbj-0.2.23.tgz' },
+32 silly install resolved     maintainers: [ [Object] ],
+32 silly install resolved     directories: {},
+32 silly install resolved     publish_time: 1450364020636,
+32 silly install resolved     _cnpm_publish_time: 1450364020636,
+32 silly install resolved     _resolved: 'http://registry.cnpmjs.org/rake-zbj/download/rake-zbj-0.2.23.tgz',
+32 silly install resolved     readme: 'ERROR: No README data found!' } ]
+33 info install rake-zbj@0.2.23 into /usr/local/lib
+34 info installOne rake-zbj@0.2.23
+35 verbose installOne of rake-zbj to /usr/local/lib not in flight; installing
+36 verbose lock using /Users/qiuniu/.npm/_locks/rake-zbj-49adb1be0e3414f6.lock for /usr/local/lib/node_modules/rake-zbj
+37 silly install write writing rake-zbj 0.2.23 to /usr/local/lib/node_modules/rake-zbj
+38 verbose unbuild lib/node_modules/rake-zbj
+39 info preuninstall rake-zbj@0.2.23
+40 info uninstall rake-zbj@0.2.23
+41 verbose unbuild rmStuff rake-zbj@0.2.23 from /usr/local/lib/node_modules
+42 silly gentlyRm /usr/local/bin/rk is being gently removed
+43 silly gentlyRm verifying /usr/local is an npm working directory
+44 silly gentlyRm /usr/local/bin/fis-plus is being gently removed
+45 silly gentlyRm verifying /usr/local is an npm working directory
+46 silly gentlyRm /usr/local/bin/fis-pc is being gently removed
+47 silly gentlyRm verifying /usr/local is an npm working directory
+48 silly gentlyRm /usr/local/bin/fisp is being gently removed
+49 silly gentlyRm verifying /usr/local is an npm working directory
+50 silly gentlyRm containing path /usr/local is under npm's control, in /usr/local
+51 silly gentlyRm deletion target /usr/local/bin/rk is under /usr/local
+52 verbose gentlyRm vacuuming from /usr/local/bin/rk up to /usr/local
+53 silly gentlyRm containing path /usr/local is under npm's control, in /usr/local
+54 silly gentlyRm deletion target /usr/local/bin/fis-plus is under /usr/local
+55 verbose gentlyRm vacuuming from /usr/local/bin/fis-plus up to /usr/local
+56 silly gentlyRm containing path /usr/local is under npm's control, in /usr/local
+57 silly gentlyRm deletion target /usr/local/bin/fis-pc is under /usr/local
+58 verbose gentlyRm vacuuming from /usr/local/bin/fis-pc up to /usr/local
+59 silly gentlyRm containing path /usr/local is under npm's control, in /usr/local
+60 silly gentlyRm deletion target /usr/local/bin/fisp is under /usr/local
+61 verbose gentlyRm vacuuming from /usr/local/bin/fisp up to /usr/local
+62 info postuninstall rake-zbj@0.2.23
+63 silly gentlyRm /usr/local/lib/node_modules/rake-zbj is being purged from base /usr/local
+64 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/rake-zbj
+65 silly vacuum-fs purging /usr/local/lib/node_modules/rake-zbj
+66 verbose unlock done using /Users/qiuniu/.npm/_locks/rake-zbj-49adb1be0e3414f6.lock for /usr/local/lib/node_modules/rake-zbj
+67 verbose stack Error: EACCES, unlink '/usr/local/lib/node_modules/rake-zbj/.npmignore'
+67 verbose stack     at Error (native)
+68 verbose cwd /Users/qiuniu/codes/dev/fis-common
+69 error Darwin 15.2.0
+70 error argv "node" "/usr/local/bin/npm" "install" "-g" "rake-zbj"
+71 error node v0.12.7
+72 error npm  v2.11.3
+73 error path /usr/local/lib/node_modules/rake-zbj/.npmignore
+74 error code EACCES
+75 error errno -13
+76 error Error: EACCES, unlink '/usr/local/lib/node_modules/rake-zbj/.npmignore'
+76 error     at Error (native)
+76 error  { [Error: EACCES, unlink '/usr/local/lib/node_modules/rake-zbj/.npmignore']
+76 error   errno: -13,
+76 error   code: 'EACCES',
+76 error   path: '/usr/local/lib/node_modules/rake-zbj/.npmignore' }
+77 error Please try running this command again as root/Administrator.
+78 verbose exit [ -13, true ]
+79 verbose unbuild lib/node_modules/rake-zbj
+80 info preuninstall rake-zbj@0.2.23
+81 info uninstall rake-zbj@0.2.23
+82 verbose unbuild rmStuff rake-zbj@0.2.23 from /usr/local/lib/node_modules
+83 silly gentlyRm /usr/local/bin/rk is being gently removed
+84 silly gentlyRm verifying /usr/local is an npm working directory
+85 silly gentlyRm /usr/local/bin/fis-plus is being gently removed
+86 silly gentlyRm verifying /usr/local is an npm working directory
+87 silly gentlyRm /usr/local/bin/fis-pc is being gently removed
+88 silly gentlyRm verifying /usr/local is an npm working directory
+89 silly gentlyRm /usr/local/bin/fisp is being gently removed
+90 silly gentlyRm verifying /usr/local is an npm working directory
+91 silly gentlyRm containing path /usr/local is under npm's control, in /usr/local
+92 silly gentlyRm deletion target /usr/local/bin/rk is under /usr/local
+93 verbose gentlyRm vacuuming from /usr/local/bin/rk up to /usr/local
+94 silly gentlyRm containing path /usr/local is under npm's control, in /usr/local
+95 silly gentlyRm deletion target /usr/local/bin/fis-plus is under /usr/local
+96 verbose gentlyRm vacuuming from /usr/local/bin/fis-plus up to /usr/local
+97 silly gentlyRm containing path /usr/local is under npm's control, in /usr/local
+98 silly gentlyRm deletion target /usr/local/bin/fis-pc is under /usr/local
+99 verbose gentlyRm vacuuming from /usr/local/bin/fis-pc up to /usr/local
+100 silly gentlyRm containing path /usr/local is under npm's control, in /usr/local
+101 silly gentlyRm deletion target /usr/local/bin/fisp is under /usr/local
+102 verbose gentlyRm vacuuming from /usr/local/bin/fisp up to /usr/local
+103 info postuninstall rake-zbj@0.2.23
+104 silly gentlyRm /usr/local/lib/node_modules/rake-zbj is being purged from base /usr/local
+105 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/rake-zbj
+106 silly vacuum-fs purging /usr/local/lib/node_modules/rake-zbj
+107 error error rolling back Error: EACCES, unlink '/usr/local/lib/node_modules/rake-zbj/.npmignore'
+107 error error rolling back     at Error (native)
+107 error error rolling back  { [Error: EACCES, unlink '/usr/local/lib/node_modules/rake-zbj/.npmignore']
+107 error error rolling back   errno: -13,
+107 error error rolling back   code: 'EACCES',
+107 error error rolling back   path: '/usr/local/lib/node_modules/rake-zbj/.npmignore' }

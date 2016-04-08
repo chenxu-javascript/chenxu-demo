@@ -1,0 +1,77 @@
+.zbj-uploadfile-list {
+    margin: 0;
+    padding: 0;
+}
+.zbj-uploadfile-item {
+  background: #f6f9fb;
+  height: 28px;
+  line-height: 28px;
+  color: #666;
+  position: relative;
+  border: 1px solid #e1eef8;
+  margin-bottom: 1px;
+  list-style-type: none;
+}
+
+.zbj-uploadfile-percent-ui {
+  background: #e1eef8;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  z-index: 1;
+}
+
+.zbj-uploadfile-item-detail {
+  position: relative;
+  z-index: 2;
+}
+
+.zbj-uploadfile-name {
+  background: url(attachbg.png) no-repeat 8px center;
+  padding-left: 31px;;
+}
+
+.zbj-uploadfile-status {
+}
+
+.zbj-uploadfile-percent-val {
+  display: none;
+}
+
+.zbj-uploadfile-delete {
+  background: #fff;
+  border-radius: 50%;
+  height: 16px;
+  line-height: 16px;
+  margin-top: 6px;
+  width: 16px;
+  text-align: center;
+  margin-right: 10px;
+  margin-left: 13px;
+}
+
+.zbj-uploadfile-uploading .zbj-uploadfile-percent-val {
+  display: block;
+}
+
+.zbj-uploadfile-uploading .zbj-uploadfile-status {
+  display: none;
+}
+
+.zbj-uploadfile-uploadfail .zbj-uploadfile-percent-ui {
+  display: none;
+}
+
+.zbj-uploadfile-uploadfail {
+  border-color: #e9e9e9;
+  background: #e9e9e9;
+}
+
+.zbj-uploadfile-uploadfail .zbj-uploadfile-status {
+  display: block;
+}
+
+.zbj-uploadfile-uploadfail .zbj-uploadfile-percent-val {
+  display: none;
+}

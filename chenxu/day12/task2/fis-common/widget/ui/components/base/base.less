@@ -1,0 +1,100 @@
+/* zbj.base style module */
+// normalize.css v3.0.1 | MIT License | git.io/normalize
+@import "normalize";
+// bootstrap type.less & normal reset
+@import "reset";
+
+body {
+    margin: 0;
+    font-family: @font-family-sans-serif;
+    font-size: @font-size-small;
+    line-height: 1.5;
+    color: @gray-dark;
+    background-color: #fff;
+}
+
+
+// =====超链=====
+a {
+    color: @gray;
+    text-decoration: none;
+}
+
+a:hover/*,
+a:focus*/ {
+    color: @brand-primary;
+    text-decoration: underline;
+}
+
+// =====字体=====
+.primary{
+  color: @brand-primary;
+}
+.highlight,a.highlight {
+  color: @brand-danger;
+}
+.gray,a.gray{
+  color: @gray-light;
+}
+.blue,a.blue{
+  color: @brand-info;
+}
+.yahei {
+  font-family: @font-family-yahei;
+}
+.simsun {
+  font-family: @font-family-serif;
+}
+
+.split{
+  display:inline-block;
+  padding:0 5px;
+  color: @gray-lighter;
+}
+
+// =====浮动=====
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+  display: inline;
+}
+
+// =====文字隐藏=====
+// -------------------------
+.hide-txt {
+  visibility:hidden;
+  display:inline-block;
+  width:0;
+  height:0;
+  overflow:hidden;
+}
+
+// 隐藏，通常给js用
+.hide {
+  display: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+
+// ===== 清除浮动 =====
+.clearfix {
+  .clearfix();
+}
+
+//文字溢出省略号,块级元素或内联块级,需设定宽度
+.text-overflow{
+  .text-overflow();
+}
+
+// Alignment
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+

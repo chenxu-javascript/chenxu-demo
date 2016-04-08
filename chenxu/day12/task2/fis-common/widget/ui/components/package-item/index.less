@@ -1,0 +1,210 @@
+/*简版套餐样式**/
+
+.package-list {
+	ul, li {
+		list-style: none;
+	}
+	li {
+		float: left;
+		position: relative;
+		width: 240px;
+		height: 350px;
+		font-family: Microsoft Yahei;
+		a {
+			display: block;
+			width: 100%;
+			height: 100%;
+			background-color: #fff;
+			border: 1px solid #e5e5e5;
+			border-radius: 2px;
+			text-decoration: none;
+			&:hover{
+				text-decoration: none;
+				border-color: #f60;
+				.item-bd {
+					p {
+						color: #666;
+					}
+				}
+				.item-ft {
+					display: block;
+				}
+			};
+		}
+		.item-header {
+			padding: 16px;
+			text-align: center;
+			height: 95px;
+			position: relative;
+			h2 {
+				font-size: 18px;
+				font-weight: 600;
+				color: #333;
+				margin: 10px 0 15px 0;
+			}
+			.line {
+				display: block;
+				border-bottom: 1px solid #eee;
+				height: 1px;
+				width: 87%;
+				position: absolute;
+				bottom: 0;
+				margin: 0 auto; 
+			}
+			.yen-icon {
+				font-size: 16px;
+				vertical-align: 1px;
+			}
+			.unit {
+				font-size: 20px;
+				font-weight: normal;
+				color: #999;
+				margin-left: 8px;
+			}
+			.unit-wrap {
+				font-size: 34px;
+				font-weight: 600;
+				color: #ff3c00;
+				margin-top: 25px;
+				.yen-icon {
+					vertical-align: 8px;
+					font-size: 20px;
+					font-weight: normal;
+					margin-right: 2px;
+				}
+				&.small {
+					font-size: 26px;
+					.yen-icon {
+						vertical-align: 4px;
+					}
+				}
+			}
+			.price {
+				font-size: 22px;
+				font-weight: 600;
+				color: #ff3c00;
+				vertical-align: -3px;
+			}
+			.new-price {
+				font-size: 14px;
+				color: #ff3c00;
+			}
+			.old-price {
+				color: #c9c9c9;
+				.yen-icon {
+					font-size: 14px;
+					vertical-align: -3px;
+				}
+				.price,
+				.unit {
+					font-size: 14px;
+					color: #c9c9c9;
+				}
+				.orange {
+					color: #ff8400;
+					text-decoration: line-through;
+				}
+			}
+			.discount-wrap {
+				color: #fff;
+				font-size: 12px;
+				background-color: #ff3c00;
+				border-radius: 3px;
+				padding: 1px 3px;
+				vertical-align: -2px;
+				margin-left: 8px;
+				position: relative;
+				.arrow-icon {
+					position: absolute;
+					width: 3px;
+					height: 5px;
+					background: url(img/arrow-icon.png) no-repeat 0;
+					top: 6px;
+					left: -2px;
+				}
+			}
+		}
+		.item-bd {
+			padding: 10px 3px 10px 10px;
+			height: 200px;
+			overflow: auto;
+			p {
+				font-size: 16px;
+				color: #666;
+			    line-height: 20px;
+				text-align: center;
+				margin: 0;
+				margin-top: 12px;
+			}
+			img {
+				width: 200px;
+				height: 200px;
+				margin: 0 auto;
+				display: block;
+				margin-top: -4px;
+			}
+		}
+		.item-ft {
+			display: none;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 228px;
+			margin: 0 1px 1px 3px;
+			border: 1px solid #fff2e0;
+			box-shadow: inset 0px 0px 5px #fff2e0;
+			padding: 3px;
+			.area-input {
+				width: 134px;
+				margin: 0;
+				border: 0;
+				box-shadow: none;
+				font-size: 12px;
+			}
+			.totle-price {
+				display: inline-block;
+			    height: 24px;
+			    padding-left: 5px;
+			    vertical-align: -10px;
+			    border-left: 1px dashed #e5e5e5;
+			    color: #ff9300;
+			    width: 76px;
+			    overflow-x: hidden;
+			}
+		}
+		&.active {
+			a {
+				border-color: #f60;
+				&:hover {
+					.item-bd {
+						p {
+							color: #ff3c00;
+						}
+					}
+				};
+			}
+			.item-header {
+				background-color: #f60;
+				.line {
+					border-bottom-color: #f60;
+				}
+				h2, .unit-wrap, 
+				.new-price, .unit,
+				.new-price .price {
+					color: #fff;
+				}
+				.old-price {
+					color: #ffc7af;
+					.orange {
+						color: #eee;
+					}
+				}
+			}
+			.item-bd {
+				p {
+					color: #ff3c00;
+				}
+			}
+		}
+	}
+}

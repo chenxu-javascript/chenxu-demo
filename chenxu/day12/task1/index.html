@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>正则</title>
+</head>
+<body>
+<h1>正则匹配ip</h1>
+ip:<input name="isIp" type="text" id="ip">
+<input type="button" id="isIp" value="检测ip">
+<h1>正则匹配邮箱</h1>
+email:<input name="isIp" type="text" id="email">
+<input type="button" id="isEmail" value="检测ip">
+<h1>密码强度</h1>
+密码:<input name="isIp" type="text" id="passwordStrong">
+<input type="button" id="ispasswordStrong" value="检测ip">
+</body>
+<script>
+
+var rex = {
+    isIp:function(str){
+//    IP地址的长度为32位，分为4段，每段8位，用十进制数字表示，每段数字范围为0~255，段与段之间用英文句点“.”隔开。例如：某台计算机IP地址为10.11.44.100。
+//
+//    分析IP地址的组成特点：250-255、200-249、0-199。
+//    这三种情况可以分开考虑，
+//    1. 250-255：特点：三位数，百位是2，十位是5，个位是0~5，用正则表达式可以写成：25[0-5]
+//    2. 200-249：特点：三位数，百位是2，十位是0~4，个位是0~9，用正则表达式可以写成：2[0-4]\d
+//    3. 0-199：这个可以继续分拆，这样写起来更加简单明了.
+//    3.1. 0-9：    特点：一位数，个位是0~9，用正则表达式可以写成：\d
+//    3.2. 10-99：  特点：二位数，十位是1~9，个位是0~9，用正则表达式可以写成：[1-9]\d
+//    3.3. 100-199：特点：三位数，百位是1，十位是0~9，个位是0~9，用正则表达式可以写成：1\d{2}
+
+        var regex = /^((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])$/;
+        if(regex.test(str)){
+            alert('验证成功，正确ip')
+        }
+        else{
+            alert('验证失败，错误ip')
+        }
+        return regex.test(str);
+    },
+    isEmail:function(str){
+//    邮箱分为3部分 第一部分 @ 第二部分 . 第三部分
+//    第一部分可以是 字母 也可以是 数字  也可以-    ([a-zA-Z0-9_-])+ 后面的+ 代表重复一次或更多次
+//    @
+//    第二部分的规则同第一部分 可以是 字母 可以是数字 也可以是 -   ([a-zA-Z0-9_-])+ 后面的+ 代表重复一次或更多次
+//    第三部分的规则是 最开始.后面 可以是 字母 可以是数字 也可以是 -    最常见的就是.com 或 .cn 所以限定位数为2-3位 ((\.[a-zA-Z0-9_-]{2,3})
+//    最后跟了一个 {1，2} 这个限定的是后缀名 可能是 .com.cn  有可能是.com 有可能是 .cn
+        var regex = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/;
+        if(regex.test(str)){
+            alert('验证成功，正确email')
+        }
+        else{
+            alert('验证失败，错误email')
+        }
+        return regex.test(str);
+    },
+    passwordStrong:function(str){
+//   g 全局模式下
+//   如果匹配成功，记录下一个字符的下标，下一次匹配从这个下标开始匹配
+//   如果匹配失败，下标重置为0，下一次匹配从0开始匹配
+//   ?= 正则前瞻  (?=)会作为匹配校验，但不会出现在匹配结果字符串里面
+//   正向前瞻用来检查接下来的出现的是不是某个特定的字符集。
+        var regex = /[a-zA-Z]+(?=[0-9]+)|[0-9]+(?=[a-zA-Z]+)/g;
+        if(regex.test(str)){
+            alert('验证成功，当前密码包含字母和数字')
+        }
+        else{
+            alert('验证失败，当前密码不包含字母和数字')
+        }
+        return regex.test(str);
+    }
+};
+
+    var ip = document.getElementById('ip');
+    var email = document.getElementById('email');
+    var password = document.getElementById('passwordStrong');
+
+    var isIp = document.getElementById('isIp');
+    var isEmail = document.getElementById('isEmail');
+    var ispasswordStrong = document.getElementById('ispasswordStrong');
+
+    isIp.addEventListener('click',function(){rex.isIp(ip.value)},false);
+    isEmail.addEventListener('click',function(){rex.isEmail(email.value)},false);
+    ispasswordStrong.addEventListener('click',function(){rex.passwordStrong(password.value)},false);
+</script>
+</html>

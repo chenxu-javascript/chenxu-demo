@@ -1,0 +1,114 @@
+@step-bg : #efefef;
+
+@step-size: 30px; // 组件高度
+@step-arr-size: @step-size / 1.415; // 箭头，正方形旋转45度，长宽 = 组件高度开二次方
+
+// zbj-step-lg
+@step-size-lg:55px;
+@step-arr-size-lg:@step-size-lg / 1.415;
+
+.zbj-step{
+    display: table;
+    width: 100%;
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0;
+    overflow: hidden; //裁切旋转超出的边角
+    *zoom: 1; //for ie 6、7
+    *margin-left: 0; //for ie 6、7
+    background: @step-bg;
+    font-size: 14px;
+    li{
+        display: table-cell;
+        *float: left;
+        *width: 24.8%; // ie7奇怪的百分比算法
+        text-align: center;
+        height: @step-size;
+        line-height: @step-size;
+        position: relative;
+        color: @gray-dark;
+        em{
+            display: inline-block;
+            margin-right: 5px;
+        }
+        // for  ie8
+        .after{
+            border-bottom: 4px solid #fff;
+            border-right: 4px solid #fff;
+            display: block;
+            position: absolute;
+            z-index: 2;
+            top:-2px;
+            height: @step-arr-size;
+            width: @step-arr-size;
+            background: @step-bg;
+
+            // build by http://www.useragentman.com/IETransformsTranslator/
+            /* IE8+ - must be on one line, unfortunately */
+            -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865482, M12=0.7071067811865466, M21=-0.7071067811865466, M22=0.7071067811865482, SizingMethod='auto expand')";
+            right: -11px;
+        }
+
+        &.done{
+            background: @brand-primary-light;
+            .after{
+                background: @brand-primary-light;
+            }
+        }
+        &.active{
+            background: @brand-primary;
+            color: #fff;
+            .after{
+                background: @brand-primary;
+            }
+        }
+    }
+}
+
+
+// rotate for css3
+:root .zbj-step li{
+    &:after{
+        display: block;
+        position: absolute;
+        z-index: 2;
+        right: 0;
+        top:-2px;
+        border-bottom: 4px solid #fff;
+        border-right: 4px solid #fff;
+        content: " ";
+        height: @step-arr-size;
+        width: @step-arr-size;
+        background: @step-bg;
+        .rotate(-45deg);
+        .transform-origin(right top);
+    }
+    &.done:after{
+        background: @brand-primary-light;
+    }
+    &.active:after{
+        background: @brand-primary;
+    }
+    &:last-child:after{
+        display: none;
+    }
+}
+
+// zbj-step-large
+.zbj-step.zbj-step-lg{
+    font-size: 18px;
+    li{
+        height: @step-size-lg;
+        line-height: @step-size-lg;
+        &:after{
+            height: @step-arr-size-lg;
+            width: @step-arr-size-lg;
+        }
+        .after{
+            height: @step-arr-size-lg;
+            width: @step-arr-size-lg;
+            right: -16px;
+        }
+    }
+}
+

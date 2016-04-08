@@ -1,0 +1,461 @@
+.paidan-tip-wrap {
+    width: 559px;
+    height: 271px;
+
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    margin-left: -279px;
+    z-index: 100;
+    
+}
+
+.paidan-tip-cover-wrap {
+    position: absolute;
+    width: 100%;
+    height: 165px;
+    z-index: 25;
+}
+.paidan-tip-wrap-move {
+    top: 320px;
+}
+.paidan-tip-wrap-active .paidan-tip-cover-wrap {
+    top: 5px;
+    z-index: 25;
+}
+
+.paidan-tip-cover, .paidan-tip-open {
+    background: url(http://cms.zbjimg.com/static/paidantip/paidan-tip-bg.png) no-repeat 0 -169px;
+    height: 165px;
+    width: 100%;
+    position: absolute;
+}
+.paidan-tip-open {    
+    background-position: 1px 3px;
+}
+
+.paidan-tip-open-bd-back {
+    background: url(http://cms.zbjimg.com/static/paidantip/paidan-tip-bg.png) no-repeat 0 -489px;
+    height: 67px;
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    z-index: 15;
+}
+.paidan-tip-open-bd-front {
+    background: #c53a37;
+    height: 133px;
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    z-index: 20;
+}
+
+.paidan-tip-bd {
+    background: #c53a37;
+    height: 138px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    z-index: 20;
+}
+.paidan-tip-wrap-active .paidan-tip-open-bd-front{
+    background: url(http://cms.zbjimg.com/static/paidantip/paidan-tip-bg.png) no-repeat 0 -336px;
+    z-index: 20;
+}
+.paidan-tip-wrap-active .paidan-tip-open-bd-back {
+    z-index: 15;
+}
+
+.paidan-tip-msg {
+    width: 434px;
+    height: 100px;
+    left: 25px;
+    bottom: 100px;
+
+    padding-left: 38px;
+    padding-right: 38px;
+    padding-top: 24px;
+
+    background: #fff;
+    border-radius: 5px;
+
+    z-index: 18;
+    position: absolute;
+
+    opacity: 1;
+    transition: all 1s;
+}
+
+.paidan-tip-wrap-active .paidan-tip-msg {
+    height: 265px;
+    bottom: 100px;
+    opacity: 1;
+}
+
+.paidan-tip-msg-title {
+    font-size: 30px;;
+}
+
+.paidan-tip-msg-info {
+    margin-top: 16px;
+    margin-bottom: 25px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.paidan-tip-msg-info a {
+    text-decoration: none;
+    color: #003399;
+}
+.paidan-tip-msg-info a span {
+    color: #ff6633;
+    margin-right: 5px;;
+}
+.paidan-tip-msg-countdown {
+    text-align: center;
+}
+.paidan-tip-msg-countdown-label {
+    display: inline-block;
+    color: #fff;
+    font-size: 20px;
+    background: #ff6633;
+    width: 140px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    letter-spacing: 5px;
+    padding-left: 5px;
+    -webkit-font-smoothing: antialiased;
+}
+.paidan-tip-msg-countdown-indicator {
+    display: block;
+    text-align: center;
+    font-size: 36px;
+    color: #ff6633;
+}
+
+.paidan-tip-msg-close {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: -27px;
+    top: -27px;
+    width: 54px;
+    height: 54px;
+    background: url(http://cms.zbjimg.com/static/paidantip/paidan-tip-bg.png) no-repeat -559px 0;
+
+    -webkit-transition: all .5s;
+       -moz-transition: all .5s;
+         -o-transition: all .5s;
+            transition: all .5s;
+
+    &:hover {
+        -webkit-transform: rotate(180deg);
+           -moz-transform: rotate(180deg);
+             -o-transform: rotate(180deg);
+                transform: rotate(180deg);
+    }
+}
+
+.paidan-tip-msg-detail-wrap {
+    width: 427px;
+    position: absolute;
+    left: 61px;
+    bottom: 27px;
+    z-index: 25;
+    display: none;
+
+    &::after {
+        content: '';
+        background: #c3841b;
+        display: block;
+        height: 4px;;
+        border-bottom: 4px solid #c3841b;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        position: relative;
+        top: -4px;
+    }
+}
+.paidan-tip-msg-detail {
+    display: block;
+    background: #f6be1f;
+    color: #fff;
+    font-size: 24px;
+    height: 54px;
+    line-height: 54px;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+        background-color: #f90;
+        color: #fff;
+    }
+}
+
+.paidan-tip-countdown {
+    position: fixed;
+    right: 0;
+    top: 25%;
+    width: 114px;
+    height: 179px;
+    z-index: 120;
+}
+
+
+.paidan-tip-countdown-ft {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 23px;
+    background: url(http://cms.zbjimg.com/static/paidantip/tip-countdown-ft.png) no-repeat left center;
+}
+
+.paidan-tip-countdown-top {
+    position: absolute;
+    z-index: 1;
+    top: -19px;
+    right: 4px;
+    width: 19px;
+    height: 45px;
+    background: url(http://cms.zbjimg.com/static/paidantip/tip-countdown-top.png) no-repeat left center;
+}
+.paidan-tip-countdown-inner {
+    background: #8e1e1d;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 156px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+
+.paidan-tip-countdown-bd{
+    position: relative;
+    margin: 19px auto 0;
+    width: 89px;
+    height: 89px;
+    background: url(http://cms.zbjimg.com/static/paidantip/clock_bg.png);
+}
+
+
+.paidan-tip-countdown-move{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 89px;
+    height: 89px;
+    background: url(http://cms.zbjimg.com/static/paidantip/clock_move.png?t=2);
+    animation: spin 1000ms infinite linear;
+}
+
+.paidan-tip-countdown-time-auto{
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+}
+.paidan-tip-countdown-time-txt{
+    text-align: center;
+    font-size: 12px;
+    color: #C08989;
+}
+
+
+.paidan-tip-countdown-txt{
+    display: block;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    font-family: "microsoft yahei";
+    font-weight: bold;
+    margin-top: 18px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+@keyframes spin {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.paidan-animation-env {
+    .paidan-tip-wrap {
+        -webkit-transition: all .5s;
+           -moz-transition: all .5s;
+             -o-transition: all .5s;
+                transition: all .5s;
+        
+        -webkit-transform: scale(.5);
+           -moz-transform: scale(.5);
+             -o-transform: scale(.5);
+                transform: scale(.5);
+    }
+
+
+    .paidan-tip-wrap-show {
+        -webkit-transform: scale(1);
+           -moz-transform: scale(1);
+             -o-transform: scale(1);
+                transform: scale(1);
+    }
+
+    .paidan-tip-cover-wrap {
+        -webkit-transition: -webkit-transform .5s;
+           -moz-transition: -moz-transform .5s;
+             -o-transition: -o-transform .5s;
+                transition: transform .5s;
+        
+        -webkit-transform-style: preserve-3d;
+           -moz-transform-style: preserve-3d;
+             -o-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+        
+        -webkit-transform-origin: 100% 0;
+           -moz-transform-origin: 100% 0;
+             -o-transform-origin: 100% 0;
+                transform-origin: 100% 0;
+
+        -webkit-perspective: 1500;
+           -moz-perspective: 1500;
+             -o-perspective: 1500;
+                perspective: 1500;
+    }
+
+
+    .paidan-tip-wrap-active .paidan-tip-cover-wrap {
+        -webkit-transform: rotateX(180deg);
+           -moz-transform: rotateX(180deg);
+             -o-transform: rotateX(180deg);
+                transform: rotateX(180deg);
+    }
+
+    .paidan-tip-cover, .paidan-tip-open {
+        -webkit-backface-visibility: hidden;
+           -moz-backface-visibility: hidden;
+             -o-backface-visibility: hidden;
+                backface-visibility: hidden;
+    }
+    .paidan-tip-open {
+        -webkit-transform: rotateX(-180deg);
+           -moz-transform: rotateX(-180deg);
+             -o-transform: rotateX(-180deg);
+                transform: rotateX(-180deg);
+    }
+}
+
+.paidan-noanimation-env {
+    .paidan-tip-cover-wrap {
+        top: -155px;
+        z-index: 15;
+    }
+    .paidan-tip-cover {
+        display: none;
+    }
+    
+    .paidan-tip-msg-close, .paidan-tip-msg-detail-wrap {
+        display: block;
+    }
+}
+
+/*错过派单提醒*/
+.paidan-miss-tip{
+    width: 615px;
+    height: 338px;
+    background: url(http://cms.zbjimg.com/images/2015/bg-tc.png) no-repeat;
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    margin-left: -307px;
+    z-index: 100;
+}
+.paidan-miss-close{
+    width: 16px;
+    height: 16px;
+    float: right;
+    margin-top: 39px;
+    margin-right: 23px;
+    position: relative;
+}
+.paidan-miss-bd{
+    width: 533px;
+    height: 118px;
+    margin-top: 95px;
+    margin-left: 38px;
+    float: left;
+}
+.paidan-miss-tit{
+    width: 350px;
+    height: 34px;
+    position: relative;
+    background-color: #3e250f;
+    border-radius: 13px;
+    color: #ffffe8;
+    padding-left: 13px;
+    padding-top: 8px;
+    font-family: 'Microsoft Yahei';
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+.paidan-miss-con{
+    width: 473px;
+    height: 50px;
+    padding: 10px 40px 18px 22px;
+    line-height: 32px;
+    font-family: 'Microsoft Yahei';
+    font-size: 14px;
+    margin: 0;
+}
+
+.paidan-miss-ft{
+    width: 430px;
+    height: 49px;
+    position: absolute;
+    top: 245px;
+    left: 78px;
+    margin: auto;
+}
+.paidan-miss-tip{
+    .paidan-miss-btn{
+        display: inline-block;
+        width: 197px;
+        height: 49px;
+        line-height: 49px;
+        color: #fff;
+        text-align: center;
+        letter-spacing: 2px;
+        font-family: 'Microsoft Yahei';
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        &:hover{
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+    .paidan-miss-btn:focus{
+        outline: none
+    }
+    .paidan-miss-history{
+        background: url(http://cms.zbjimg.com/images/2015/iclft-tc.png) no-repeat;
+    }
+    .paidan-miss-rework{
+        background: url(http://cms.zbjimg.com/images/2015/icrht-tc.png) no-repeat;
+        float: right;
+    }
+}
+

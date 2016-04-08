@@ -1,0 +1,26 @@
+<div class="upload-box-wrap j-logo-file">
+	<div class="upload-box-title">作品馆</div>
+	<div class="upload-box-filelist">
+	    <table class="ui-table upload-table1" style="width: 100%;border-bottom: none;margin-bottom: 0px;">
+	        <tbody>
+	            <tr>
+	                <td>
+	               		<div class="file-name">
+	               			<em></em>
+	               			<span><%=data.file_name%></span>
+	               		</div>
+	               	</td>
+	                <td><%=data.file_size%>KB</td>
+	                <td><%=data.save_time%></td>
+	                <td>
+	                    <span class="imgPreview-edit J_logo_triggerBtn" data-name="edit">编辑</span>
+	                </td>
+	                <td style="width: 107px">
+                        <a href="javascript:;" class="J_del">删除</a>
+                    </td>
+					<input type="hidden" class="J_file_id" value="<%=data.fileinfo_id%>">
+	            </tr>
+	        </tbody>
+	    </table>
+	</div>
+</div>

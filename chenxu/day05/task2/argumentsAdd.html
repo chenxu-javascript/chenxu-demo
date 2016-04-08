@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>不定参的用法</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+    /*
+    完善下面的函数，实现其功能
+    function add() {
+        var result = '';
+        // TODO
+        return result;
+    }
+
+    var total = add(1 ,2); // 3
+    var total = add(1, 2, 3); // 6
+    var total = add(1, 2, 3, 4, 5); // 15
+    ...*/
+    /**
+     * 不定参的add函数
+     * 遍历arguments
+     * @returns {number}
+     */
+    (function(){
+        function add(){
+            var result = 0;
+            for(var i = 0; i<arguments.length; i++){
+                result += arguments[i];
+            }
+            return result;
+        }
+
+        console.log(add(1,2,3));
+        console.log(add(1,23,4,5,6));
+        console.log(add('a',1,2));
+        console.log(add(1,2,3,'b'));
+    })();
+
+</script>
+</html>

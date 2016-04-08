@@ -1,0 +1,140 @@
+.zbj-paging {
+  text-align: right;
+  ul{
+    .list-unstyled();
+    display: inline-block;
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    .border-radius(4px);
+    font-family: arial, serif;
+    text-align: center;
+    vertical-align: top;
+  }
+  li{
+    display: inline;
+    a{
+      display: inline-block;
+      float: left;
+      padding: 5px 12px;
+      line-height: 20px;
+      color: #333;
+      min-width: 14px;
+      border-right: 1px solid #ddd;
+      font-size: @font-size-base;
+    }
+    &.active a{
+      color: #9d9f9c;
+      cursor: default;
+      background: #f5f5f5;
+      text-decoration: none;
+    }
+    &.disabled a{
+      color: #9d9f9c;
+      cursor: default;
+      text-decoration: none;
+    }
+  }
+}
+
+.zbj-paging-center {
+  text-align: center;
+}
+
+.zbj-paging-left {
+  text-align: left;
+}
+
+.zbj-paging-mini{
+  display: inline-block;
+  .item-page-wrap{
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+  }
+  span, a{
+    display: inline-block;
+    float: left;
+    margin-left: -1px;
+    padding: 4px 10px;
+    line-height: 20px;
+    color: @gray-dark;
+    border: 1px solid #ddd;
+    font-family: @font-family-serif;
+    text-decoration: none;
+  }
+  span{
+    color: @gray-light;
+    cursor: default;
+  }
+}
+
+.zbj-paging-form{
+  display: inline-block;
+  margin-left: 5px;
+  .zbj-input, .zbj-btn{
+    border-color: #ddd;
+  }
+  .zbj-input{
+    padding: 5px;
+    width: 15px;
+    text-align: center;
+  }
+  .zbj-btn{
+    padding: 4px 10px;
+  }
+}
+
+.zbj-paging-large{
+  li a {
+    padding: 11px 19px;
+    font-size: @font-size-large;
+  }
+  .zbj-paging-form{
+    font-size: @font-size-large;
+    .zbj-input{
+      padding:11px 10px;
+      font-size: @font-size-large;
+      width: 30px;
+    }
+    .zbj-btn{
+      padding: 10px 15px;
+    }
+  }
+  .zbj-paging-mini{
+    font-size: @font-size-large;
+    a,span{
+      padding: 10px 15px;
+      font-size: 24px;
+    }
+  }
+}
+
+.zbj-paging-small{
+  li a {
+    padding: 2px 10px;
+    font-size: @font-size-small;
+  }
+  .zbj-paging-form {
+    .zbj-input{
+      padding: 2px 5px;
+    }
+    .zbj-btn{
+      padding: 0 10px;
+    }
+  }
+  .zbj-paging-mini{
+    font-size: @font-size-small;
+    a,span{
+      padding: 1px 7px;
+      font-size: 14px;
+    }
+  }
+}
+
+.zbj-paging-short{
+  .zbj-paging-form{
+    display: none;
+  }
+}

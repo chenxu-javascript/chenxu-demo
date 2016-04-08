@@ -1,0 +1,45 @@
+<div class="webim" id="webim">
+    <div class="webim-switch">
+        <i class="webim-switch-icon"></i>
+        <span class="webim-switch-txt" id="webim-switch-status"></span>
+    </div>
+    <div class="webim-box" id="webim-box">
+        <div class="webim-people fl">
+            <ul class="webim-people-list" id="webim-people-list">
+            </ul>
+        </div>
+        <div class="webim-chat">
+            <div class="webim-chat-head clearfix" id="webim-chat-head">
+                <span class="webim-chat-title fl" id="webim-chat-title"><a href="###" target="_blank" title="IM聊天">IM聊天</a></span>
+                <span class="item-action fr">
+                    <%if(isMute) { %>
+                        <span class="webim-chat-sound" title="开启提示音" id="webim-sound-set"></span>
+                    <%}else{%>
+                        <span class="webim-chat-sound webim-chat-sound-mute" title="关闭提示音" id="webim-sound-set"></span>
+                    <%}%>
+                    <span class="webim-chat-fullpage" title="全屏" id="webim-fullpage-set"></span>
+                    <span class="webim-chat-close" title="关闭" id="webim-chat-close"></span>
+                </span>
+            </div>
+            <div class="webim-chat-warn">服务商不管以任何形式要求线下交易，都存在诈骗的风险，请提高警惕<span id="webim-warn-close" class="webim-warn-close" title="关闭提示">&times;</span></div>
+            <div class="webim-chat-content" id="webim-chat-body">
+                <div class="webim-chat-tips webim-load-history"><span id="webim-load-history">点击加载历史消息</span></div>
+            </div>
+            <div class="webim-chat-input"  id="webim-chat-foot">
+                <div class="webim-chat-input-tools">
+                    <a href="###" title="表情" class="item-face"></a>
+                    <a href="###" title="图片" class="item-pic" id="webim-upload-img"></a>
+                    <a href="http://app.<%=window.ZBJInfo.baseURI%>/bz/" target="_blank" class="webim-download fr">下载猪八戒客户端，沟通更顺畅</a>
+                    <div class="webim-emoji"></div>
+                </div>
+                <textarea class="webim-chat-input-text" id="webim-chat-input"></textarea>
+                <div class="webim-chat-input-foot">
+                    <a class="webim-people-rule fl" href="http://help.<%=window.ZBJInfo.baseURI%>/1037.html" target="_blank" >《消息系统使用规则》</a>
+                    <button class="webim-chat-input-btn fr" id="chat_input_btn">发送</button>
+                    <span class="fr">enter发送，ctrl+enter换行</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<audio class="hide" id="webim-sound" src="http://cms.zbjimg.com/webim/income.mp3" controls="controls"><!-- 声音标签 --></audio>

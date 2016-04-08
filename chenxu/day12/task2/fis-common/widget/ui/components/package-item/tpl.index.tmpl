@@ -1,0 +1,61 @@
+<div class="package-list">
+	<ul>
+		<%	
+			var n = 0;
+			var url = window.location.href;
+			if(!data.length) return;
+			for(var i = 0, len = data.length; i < len; i++) {
+				var item = data[i];
+		%>
+			<li class="package-item <%if(item.is_selected == 1) {%>active<%}%> <%if((n + 1) % 4 == 0) {%>no-margin-right<%}%>">
+				<a href="javascript:;" data-linkid="<%=item.linkid%>" class="package-link" pcid="<%=item.pcid%>" basicIdArr="<%=item.basicIdArr%>" type="<%=item.type%>">
+					<div class="item-header">
+						<h2><%=item.ctitle%></h2>
+						<%if(item.type == 1 && item.discount_num == 1) {%>
+							<p class="unit-wrap">
+								<span class="yen-icon">&yen;</span>
+								<%= (~~item.oldprice)%>
+								<span class="unit">/<%=item.unit%></span>
+							</p>
+						<%} else if(item.type == 1 && item.discount_num < 1){
+							var newPrice = ~~(item.oldprice * item.discount_num);
+							var oldPrice = ~~item.oldprice;
+							var leftPrice = oldPrice - newPrice;
+						%>
+							<p class="new-price">八戒价：<span class="yen-icon">&yen;</span><span class="price"><%= newPrice%><span class="unit">/<%=item.unit%></span></span></p>
+							<p class="old-price">市场价：<span class="yen-icon">&yen;</span><span class="price"><span class="orange"><%= oldPrice%></span><span class="unit">/<%=item.unit%></span></span><span class="discount-wrap"><i class="arrow-icon"></i><%if(item.discount_ch){%><%=item.discount_ch%><%} else {%>立减<%=leftPrice%><%}%></span></p>
+						<%} else if(item.type == 2) {%>
+							<p class="unit-wrap small">
+								<span class="yen-icon">&yen;</span>
+								<%= item.oldprice%>
+								<span class="unit">/<%=item.unit%></span>
+							</p>
+						<%}%>
+						<span class="line"></span>
+					</div>
+					<div class="item-bd">
+						<%if(item.describle[0].indexOf('service') >= 0){%>
+							<%
+								var imgUrl = window.ZBJInfo.upFileUrl + item.describle[0];
+							%>
+							<img src="<%= imgUrl%>">
+						<%} else {%>
+							<%for(var j = 0, jlen = item.describle.length; j < jlen; j++) {%>
+								<p><%= item.describle[j]%></p>
+							<%}%>
+						<%}%>
+					</div>
+					<%if(item.type == 1 && item.discount_num == 1 && url.indexOf('jjzx/xptc.html') > -1) {%>
+						<div class="item-ft">
+							<input type="text" placeholder="输入爱屋面积计算设计费" class="area-input" unit-price="<%= (~~item.oldprice)%>">
+							<span class="totle-price">&yen;0</span>
+						</div>
+					<%}%>
+				</a>
+			</li>
+		<%
+			n++;
+		}
+		%>
+	</ul>
+</div>

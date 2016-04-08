@@ -1,0 +1,94 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, STHeiti, sans-serif;
+  background-color: #fafafa;
+}
+
+.message {
+  width: 653px;
+  height: 580px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  .message-content {
+    background-repeat: no-repeat;
+    background-position: 147px 6px;
+  }
+
+  .message-context {
+    margin-top: 320px;
+    padding-left: 208px;
+    width: 191px;
+  }
+
+  .message-title {
+    font-size: 22px;
+    padding-top: 10px;
+    letter-spacing: 1px;
+  }
+
+  .message-bottom {
+    margin-top: 15px;
+    font-size: 14.33px;
+    color: #b0b0b0;
+    line-height: 21.14px;
+    letter-spacing: 1px;
+  }
+
+  .message-second {
+    font-size: 17px;
+  }
+
+  .message-bottom-link {
+    letter-spacing: 1px;
+    text-decoration: underline;
+  }
+}
+
+.message.warning {
+
+  background-image: url("img/warning-bg.png");
+
+  .message-content {
+    background-image: url("img/warning-icon.png");
+  }
+
+  .message-second {
+    color: #fdaf13;
+  }
+  .message-bottom-link {
+    color: #fdaf13;
+  }
+}
+
+.message.success {
+  background-image: url("img/success-bg.png");
+
+  .message-content {
+    background-image: url("img/success-icon.png");
+  }
+
+  .message-second {
+    color: #44caaf;
+  }
+  .message-bottom-link {
+    color: #44caaf;
+  }
+}
+
+.message.error {
+
+  background-image: url("img/error-bg.png");
+
+  .message-content {
+    background-image: url("img/error-icon.png");
+  }
+
+  .message-second {
+    color: #eb684a;
+  }
+  .message-bottom-link {
+    color: #eb684a;
+  }
+}

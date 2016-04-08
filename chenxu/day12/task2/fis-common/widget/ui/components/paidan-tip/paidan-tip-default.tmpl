@@ -1,0 +1,22 @@
+<div class="paidan-tip-wrap" id="j-paidan-tip-wrap">
+    <div class="paidan-tip-cover-wrap">
+        <div class="paidan-tip-cover"></div>
+        <div class="paidan-tip-open"></div>
+    </div>
+    <div class="paidan-tip-open-bd-back"></div>
+    <div class="paidan-tip-open-bd-front"></div>
+    <div class="paidan-tip-bd"></div>
+
+    <div class="paidan-tip-msg yahei">
+        <div class="paidan-tip-msg-title">收到新的派单!</div>
+        <div class="paidan-tip-msg-info"><a target="_blank" href="<%=data.taskUrl%>"><span><%if (data.reward == 0){ %>价格待商议<% }else{ %>&yen;<%=data.reward%><% }%></span><%=data.title%></a></div>
+        <div class="paidan-tip-msg-countdown">
+            <span class="paidan-tip-msg-countdown-label">投标倒计时</span>
+            <span class="paidan-tip-msg-countdown-indicator j-paidan-tip-countdown" data-time="<%=data.time%>">10:00</span>
+        </div>
+        <a class="paidan-tip-msg-close" href="javascript:void(0);" data-taskid="<%=data.taskId%>"></a>
+    </div>
+    <div class="paidan-tip-msg-detail-wrap">
+        <a target="_blank" class="paidan-tip-msg-detail yahei" href="<%=data.url%>" data-taskid="<%=data.taskId%>">查看详情</a>
+    </div>
+</div>
